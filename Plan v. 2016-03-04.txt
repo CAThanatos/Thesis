@@ -1,0 +1,76 @@
+Plan
+Intro générale et état de l'art général (sur la coopération ; sur les méthodes) [*]
+Partie 1: évolution de la coopération mutualiste et de la coordination
+- introduction et état de l'art [*]
+- évolution de la coordination et coopération [PlosComp? + sensibilité?]
+- coordination avec comportements asymétriques [?]
+Partie 2: robotique collective et évolution artificielle
+- introduction et état de l'art [*]
+- co-évolution de comportements hétérogènes pour la résolution d'un problème collectif [ECAL2015 + diversité] 
+- méthodes pour l'évolution de comportements collectifs hétérogènes [ALIFE2016? + toutes les analyses]
+Conclusions, discussion et perspectives [~*] 
+
+----------------------------------------------------------------------------
+
+Problématique : Les mécanismes comportementaux pour la coordination dans l'évolution de la coopération
+
+Introduction : 
+	- Introduction très générale sur la coopération : d'où ça vient, des exemples réels etc...
+	- Puis rentrer plus en détail sur la coopération et la coordination : les différents types de coopérations (Connor), altruisme, mutualisme etc...
+	- Terminer par la coopération en robotique, de manière large : à quoi ça sert, à quoi ça peut servir, qu'est-ce qui a été fait
+	- Ce qui permet d'introduire le fait qu'on a deux motivations : Model et Design (Trianni, 2014)
+
+
+Partie 1 : Model
+	- 1) Ce qui se fait pour le modelling de la coopération
+		-> Les modèles computationnels, leurs avantages et défauts
+		-> Les modèles individus-centrés et l'ER (ER pour la modélisation, en expliquant en quoi ce qu'on veut faire n'a pas encore été fait)
+		-> Ce qui permet de bien expliquer quel aspect de la coopération on veut étudier : l'influence des mécanismes comportementaux de la coordination pour l'évolution de la coopération
+
+	- 2) Papier Bio 1
+	- 3) Papier Bio 2
+
+
+Partie 2 : Design
+	- 1) Ce qui se fait en ER pour la partie design.
+			-> Ce qui nous motive : Groupes hétérogènes/Fitness Individuelle. Pourquoi ?
+			-> On veut des (1) comportements asymétriques (premier papier) et on veut (2) les obtenir automatiquement et rapidement (deuxième papier)
+
+	- 2) Papier ER 1
+	- 3) Papier ER 2
+
+
+
+
+
+----------------------------------------------------------------------------
+
+Papier bio 1 :
+	- On présente le problème
+	- On montre comment la coordination c'est méga chaud
+	- Et on commence même à envisager des solutions
+
+Papier bio 2 (suppositions) :
+	- Etude du recyclage de leader/follower comme mécanisme pour évoluer la coop
+	- Plus large que ça en fait : on veut montrer qu'un mécanisme qui permet de faciliter la coordination en groupe
+	permet aussi de faciliter le bootstrap de manière générale
+	-> En fait on ne présente du coup qu'une seule solution au finale
+
+
+
+Papier ER 1 :
+	- En ER pour l'évol de la coop on fait généralement du clonal : logique c'est le plus simple.
+	- Même en fait les comportements asymétriques ça peut être méga chouette
+	- Et on le montre
+
+Papier ER 2 :
+	- Ces comportements asymétriques comment qu'on peut les évoluer ?
+	- Faut du polymorphisme génotypique: c'est méga chaud
+	-> Followup : regardez on y arrive ! (on espère en tout cas)
+
+
+----------------------------------------------------------------------------
+
+Questions :
+	- Il y a beaucoup de répétitions entre les différents articles (genre les intros). Est-ce que c'est grave ? Est-ce que
+	le fait qu'on rerépète dans les intros de partie est gênant aussi ?

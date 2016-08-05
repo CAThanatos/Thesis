@@ -1,0 +1,97 @@
+Coordination in the evolution of cooperation: from biological computational modelling to applications in evolutionary robotics
+Coordination in the evolution of cooperation: from computational modelling to evolutionary robotics design
+
+
+Problématique : Les mécanismes comportementaux pour la coordination dans l'évolution de la coopération
+
+Introduction :
+	I. The Evolution of Cooperation
+		1. The Profusion of Cooperative Behaviours and their Importance in Evolutionary History
+			-> Very introductive subsection with a lot of examples of cooperation
+			-> How cooperation is an important part of social structure and how it shaped the evolution of complex organisms
+
+		2. Altruism and Indirect Fitness Benefits 
+
+		3. Mutualism and Direct Fitness Benefits
+			-> At the end of this subsection, readers should be convinced that intraspecies mutualism is (1) important and (2) not really studied
+
+	II. Coordination in Cooperative Behaviours
+		1. Collective Acts of Coordination
+			-> More of a review of coordination. The idea would be to show the strong link between coordination and mutualism in nature.
+
+		2. The Dilemma of Coordination
+			-> Chicken & Egg problem + explanation of the Stag Hunt
+
+#		1. The Mechanistic Constraints of Genotype-Phenotype Mapping
+		
+#		2. The Dilemma of Coordination
+		
+#		3. Stag Hunt ? (As the basic framework for our experiments)
+
+	III. Evolving Coordination in Evolutionary Robotics
+		1. Basic explanation of ER
+
+		2. Modelling the Evolution of Cooperation
+
+		3. Designing Cooperative Robots
+
+			-> Both last subsections are brief introductions to each part of the thesis
+
+
+Part 1: Model
+	Introduction:
+		1. Why Model the Evolution of Cooperation ?
+			-> Field work, Lenski: why "observing" natural evolution is not sufficient
+
+		2. Computational Models
+
+		3. Robotic Models
+			-> Review of people that are doing the same thing in IBM (Avida, ER etc...)
+
+	Article 1
+
+	Article 2
+
+
+Part 2: Design
+	Introduction:
+		1. Cooperative Robots for Collective Tasks
+			-> Where we justify the need to have cooperation between robots (if it has not been said in Intro.III.3)
+
+		2. Designing Collective Robots
+			-> General (quick) review on the design of collective robots without ER
+			-> Should obviously highlight the advantages of using ER
+
+		3. Evolving Cooperation
+			-> Review of the works in ER where cooperation is evolved and where we stand in this context (and why)
+
+	Article 1
+
+	Article 2
+
+
+
+----------------------------------------------------------------------------
+
+Papier bio 1 :
+	- On présente le problème
+	- On montre comment la coordination c'est méga chaud
+	- Et on commence même à envisager des solutions
+
+Papier bio 2 (suppositions) :
+	- Etude du recyclage de leader/follower comme mécanisme pour évoluer la coop
+	- Plus large que ça en fait : on veut montrer qu'un mécanisme qui permet de faciliter la coordination en groupe
+	permet aussi de faciliter le bootstrap de manière générale
+	-> En fait on ne présente du coup qu'une seule solution au finale
+
+
+
+Papier ER 1 :
+	- En ER pour l'évol de la coop on fait généralement du clonal : logique c'est le plus simple.
+	- Même en fait les comportements asymétriques ça peut être méga chouette
+	- Et on le montre
+
+Papier ER 2 :
+	- Ces comportements asymétriques comment qu'on peut les évoluer ?
+	- Faut du polymorphisme génotypique: c'est méga chaud
+	-> Followup : regardez on y arrive ! (on espère en tout cas)
