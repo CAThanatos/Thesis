@@ -39,7 +39,7 @@
 
     % Phylogénétique ?
 
-  \subsection{Modeling in Biology}
+  \subsection{Classical Modeling in Biology}
 
     As previously said, it is now classical in evolutionary biology to model the evolution of cooperation (among any evolutionary trait). Models are numerous and a lot of different frameworks have been proposed to classify cooperative actions~\cite{Dugatkin2002, Sachs2004, Lehmann2006}. To that end, purely mathematical models dominate the field~\cite{Servedio2014}. In particular, \emph{population genetics} form a large part of the litterature in evolutionary biology. This field was mostly created by the works of Ronald Fisher, J.B.S. Haldane and Sewal Wright. Fisher was the first to link mendelian inheritance (i.e. the theory on the inheritance of biological traits) with mathematical models of natural selection in his book \textit{The Genetical Theory of Natural Selection}~\cite{Fisher1930}. Population genetics is concerned with studying the change in frequency of alleles of particular locus in the genotype across generations. Various studies used population genetics to approach evolutionary problems as diverse as 
     
@@ -77,30 +77,69 @@
     Adaptive dynamics have been really useful in understanding complex phenomenons that may not have been studied under classical game theoretical framework. First, they introduced the concept of "branching points". These occurs when a strategy is convergence stable but not evolutionarily stable~\cite{Geritz1998}. This happens because this strategy acts as evolutionary attractor from afar but, because the fitness landscape changes as the resident strategy changes, this strategy may be a fitness minimum (and thus not ESS). These are called branching points because two different evolving population may coexist and evolve separately. Branching points have thus been used to model the evolution of speciation~\cite{Geritz2004}. Coevolution has also been widely studied in this field, thanks in particular to the modeling of frequency-dependence. For example, the competitive coevolution of predators and preys, and how branching points influence the apperance of niches in these systems~\cite{Bowers2003}. But cooperative coevolution has also been studied. Namely, the evolution of mutualism (i.e. interspecific mutualism). The mechanisms that could allow its evolutionary stability against cheaters has thus been studied~\cite{Ferriere2002, McGill2005}. (TD: Phrasing bien pourri là) Finally, it goes without surprise that altruism has had its fair share of research under adaptive dynamics. Most notably, the ecological aspect of adaptive dynamics (as in game theory in general) allowed to studied how dispersal could be a prominent mechanism to decrease kin competition and thus allow kin selection to effectively enable the evolution of altruism~\cite{LeGalliard2003, LeGalliard2005}.
 
     % Main criticism But the thing is beyond an invasion threshold 
-
-
-    -> Passer directement au SH pour parler de "vraie coopération" (ou plutôt de mutual benefits vu que c'est ce qui nous intéresse). Dire que finalement à part le SH c'est plutôt rare et expliquer comment Skyrms l'a "résolu".
-    Ca nous permet de donner certaines limitations à l'EGT, notamment le fait que t'aies des stratégies fixes 
-
-    -> Puis boom on peut alors parler des continuous trait et d'adaptive dynamics. Rapidement probablement. Pour dire surtout ce qu'on n'aime pas dedans.
-
-    One of the main feature of evolutionary game theory in comparison to population genetics is frequency-dependent selection
-
-    -> Mentionner les différents types de jeux ? (coordination games, PD etc... (ya un papier là-dessus))
-
-
-    Parler des modèles théoriques "classiques" (Depuis Fisher, avec des équa diffs, on regarde comment se propage un trait etc..)
-    Puis parler d'EGT en mentionnant au passage EGT en continuous trait et adaptive dynamics
-    Puis finalement IBM et ER (en parlerdans la prochaine subsection ?)
+    % -> Mentionner les différents types de jeux ? (coordination games, PD etc... (ya un papier là-dessus))
     
 
-  \subsection{Individual Based Modeling and Evolutionary Robotics}
+  % Parler plutôt de Computational Biology ? J'aime bien l'idée de parler de techniques de modélisations particulières qui s'inscrivent finalement dans cette opposition plus générale de Classical VS Computational
+  \subsection{Individual-Based Modeling and Evolutionary Robotics}
+
+    The different modeling techniques presented before are sometimes named "classical models"~\cite{Huston1988, Adami2014} and this how we will refer to them in this manuscript. It is important to understand this is not used in a derogatory fashion to distinguish between the old and the new. This is rather a way to discriminate between the classical models, which are usually purely mathematical analytical models and which have been classical in evolutionary biology, and a range of models which were born thanks to the easier and easier access to computational power. This allowed to approach biological problems in a very different way and, some would argue, to go beyond what is possible with purely mathematical modeling~\cite{Adami2012}. More generally, computational models allow for the addition of stochastic effects, which are essential to the modeling of most of evolutionary mechanisms (e.g. how population dynamics happen in finite populations) and thus are an important addition to classical models. However, it is important to note that sometimes the line between classical and computational models can sometimes be not so easy to draw and there is a real scientific interest in trying to get the best of both worlds~\cite{Wilson1998}.
+
+    One such computational method which has had a big influence on behavioral ecology is \emph{individual-based modeling}\footnote{It is important to note that the term \emph{agent-based modeling} can often be found in the litterature in lieu of individual-based modeling. Both names refer to the same technique and can be used interchangeably. While individual-based modeling (IBM) seems to be found more often in biological applications~\cite{Grimm2005}, no real consensus exist on which term to use. We choose to use the latter throughout this manuscript.}.
+
+    Grimm2005
+    Adami2014
+    Huston1988
+    DeAngelis2005
+    Adami2012
+    Parry2006
+    Szabo2007
+    Iliopoulous2010
+
+
     \begin{itemize}
       \item{Review of people that are doing the same thing in IBM (Avida, ER etc...)}
     \end{itemize}
 
-    
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%% ----------------------- ARTICLE 1 ----------------------- 
+>>>>>>> 470e146f2de49e60ea4f124a39f2a2bdad69c07e
 \section{To Cooperate or not to Cooperate: why Behavioural Mechanisms Matter}
   \subsection{Introduction}
     It is well known that, in the absence of genetic relatedness, altruistic behaviours in which individuals pay a fitness cost for the benefit of others cannot evolve by natural selection \cite{Hamilton1964,West2007a}. However, it is often assumed that mutualistic behaviours, wherein individuals collectively gain a common benefit~\cite{Leimar2003, Leimar2010}, do not pose such a problem, and are therefore of limited interest to evolutionists: they simply evolve because they benefit the individuals who express them.
