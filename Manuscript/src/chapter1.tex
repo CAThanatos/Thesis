@@ -87,7 +87,7 @@
 
     The different modeling techniques presented before are sometimes named "classical models"~\cite{DeAngelis2005, Adami2014} and this how we will refer to them in this manuscript. It is important to understand this is not used in a derogatory fashion to distinguish between the old and the new. This is rather a way to discriminate between the classical models, which are usually purely mathematical analytical models and which have been classical in evolutionary biology, and a range of models which were born thanks to the easier and easier access to computational power. This allowed to approach biological problems in a very different way and, some would argue, to go beyond what is possible with purely mathematical modeling~\cite{Adami2012}. More generally, computational models allow for the addition of stochastic effects, which are essential to the modeling of most of evolutionary mechanisms (e.g. how population dynamics happen in finite populations) and thus are an important addition to classical models. However, it is important to note that sometimes the line between classical and computational models can sometimes be not so easy to draw and there is a real scientific interest in trying to get the best of both worlds~\cite{Wilson1998}.
 
-    One such computational method which gathered a strong interest in behavioral ecology are \emph{individual-based models}\footnote{It is important to note that the term \emph{agent-based model} can often be found in the litterature in lieu of individual-based model. Both names refer to the same technique and can be used interchangeably. While individual-based model (IBM) seems to be found more often in biological applications~\cite{Grimm2005}, no real consensus exists on which term to use. We choose to use the latter throughout this manuscript.}~\cite{Huston1988}. As stated in the name, the basic principle of an IBM is to focus the modeling on the individual. This is very different from most modeling techniques in ecology where the emphasis is put on the population dynamics~\cite{Grimm2005}. This does not mean that research in IBMs are not interested in studying population dynamics but rather that these dynamics are studied as a consequence from individual-based interactions. To put it more simply, and in a vocabulary which is strongly rooted in IBMs, the main focus of an IBM is to study the collective dynamics emerging from individual-level interactions (whether with other individuals or the environment). And, more importantly, the particularity of an IBM is that these individuals, which are the building blocks of the system, are adaptive: collective properties arise from these (sometimes simple) adaptive behaviours.
+    \subsubsection{Individual-based models.} One such computational method which gathered a strong interest in behavioral ecology are \emph{individual-based models}\footnote{It is important to note that the term \emph{agent-based model} can often be found in the litterature in lieu of individual-based model. Both names refer to the same technique and can be used interchangeably. While individual-based model (IBM) seems to be found more often in biological applications~\cite{Grimm2005}, no real consensus exists on which term to use. We choose to use the latter throughout this manuscript.}~\cite{Huston1988}. As stated in the name, the basic principle of an IBM is to focus the modeling on the individual. This is very different from most modeling techniques in ecology where the emphasis is put on the population dynamics~\cite{Grimm2005}. This does not mean that research in IBMs are not interested in studying population dynamics but rather that these dynamics are studied as a consequence from individual-based interactions. To put it more simply, and in a vocabulary which is strongly rooted in IBMs, the main focus of an IBM is to study the collective dynamics emerging from individual-level interactions (whether with other individuals or the environment). And, more importantly, the particularity of an IBM is that these individuals, which are the building blocks of the system, are adaptive: collective properties arise from these (sometimes simple) adaptive behaviours.
 
     IBM should not be considered of interest simply because they are thought to be more "realistic" than classical models. Such considerations are doubtful and may hinder the real contributions of IBMs. IBMs are mainly used to study biological phenomenons for which individual variations, and the assumptions that stem from them, are critical. DeAngelis & Mooij~\cite{DeAngelis2005} defined five axes along which IBMs were used to model mechanistic details in the variations between individuals:
 
@@ -111,14 +111,43 @@
     % Il y a quand même une différence entre de l'IBM pour modéliser des vrais animaux et de l'IBM Artificial Life (donc en gros un peu ce que dit Webb). Va falloir l'expliquer ça à un moment.
     % IBM are diverse ? (genre AVIDA c'est IBM, AEVOL aussi)
     % -> Sometimes closer to reality -> aevol, sometimes further -> AVIDA
+    % Si besoin, dans Floreano2010 ya un peu de biblio sur AVIDA (ça sera bien suffisant !)
+    % Digital genetics: unravelling the genetic basis of evolution (à garder de côté pour Avida et ALIFE)
+    % The ecology of action selection: insights from artificial life Anil K. Seth Pareil (pour ALIFE, pas AVIDA)
 
 
+    \subsubsection{Evolutionary robotics.} The final modeling technique we will be talking about here is evolutionary robotics~\cite{Nolfi2000, Doncieux2015a} (ER). We will not get here into the details of the technical principles of this framework as this was already covered in the Introduction of the manuscript. What we want to talk about here are the reasons for which one could use evolutionary robotics above any other modeling techniques presented before. To summarize quickly what we said in the Introduction, behind evolutionary robotics is the idea of using Darwinian selection and variation to evolve a robot controler and/or morphology~\cite{Floreano2010}. At its core, evolutionary robotics is a design technique, a desire to have a holistic approach of the conception of a robot. Because creating a fully embodied agent is complex, we want evolution to do the work. So why should evolutionary biologists be interested in using ER ?
+
+    The reason is in fact very similar to why IBMs are interesting when it comes to the study of behavioural ecology. Individual-based modeling and evolutionary robotics have actually very resembling features that makes them appealing as a framework. They both model evolution at the level of the individual. This means that there is a focus in each of these methods on the adaptive behaviour of an individuals given a particular ecological context. This implies that the emphasis is put on phenotypical traits and not genotypical traits. And as in IBM, ER can be used to model spatial organization and local interactions, life cycle dynamics or any kind of phenotypical plasticity~\cite{Mitri2012} (i.e. the same axes of details as those put forth by DeAngelis & Mooij for IBMs). This is why ER has the same capacity as IBM to study how behavioural mechanisms can influence the ultimate evolutionary dynamics. Therefore, the threshold between ER and IBMs can sometimes be quite blurry. And even, it can be argued that some studies that have been conducted in ER could have given similar results with a "simpler" IBM~\cite{Mitri2012}.
+
+    But that does not mean that there is no profound difference that justify the use of ER. First, there probably is an historical difference which causes that still today some may use ER but refer to it as IBM. In particular, both technique, while computational, come from different communities. As we previously said, ER is rooted in the field of robotics, as a design method. In comparison, IBMs were rather created for the design of multi-agent systems and their applications. Both do now represent their own field but these kinds of historical reasons tend to stick for a long time. But the main difference between both these framework does not just stem from this confusion. Rather, we could argue that ER models are IBMs where the individual is an embodied robot~\cite{Mitri2012}. Consequently, the robots have a physical body which creates another level of interactions with the environment. Sensory information is also part of the robots design, which means that they often have imperfect information about the environment. In comparison, IBMs will often (but not always) provide a global and perfect description of the world. Finally, ER implies that the environment (whether simulated or not) exists in a bounded space, which may not be the case in a part of the IBMs. All of this can have lasting consequences on the dynamics of a particular system. When those physical properties are expected to be of importance for the model, it may be advantageous to use ER rather than IBMs. The work of Mitri and colleagues~\cite{Mitri2009} provides a rather interesting example of such case where the physical embodiement of the robots were important. While this study was focused on the evolution of communication between simulated robots for foraging, they found that the aggregation of robots on a foraging site provided information that did not require the use of communication.
+
+
+
+    -> Application ER pour social behaviours et evol de manière générale
+
+    -> Application ER pour evol coopération
+
+
+
+
+
+
+
+
+    Floreano2010 -> Evolution of altruism
 
 
     \begin{itemize}
       \item{Review of people that are doing the same thing in IBM (Avida, ER etc...)}
     \end{itemize}
 
+
+
+  \subsection{Problematique et justification des choix oui lol}
+    % Garder ça pour après quand on justifie notre choix
+    % However, one thing that should now be clear is that we do not claim that any model fundamentally better than the others. In the contrary, and even if there has been a progression in the way we deal with evolutionary processes, each model is useful in its own way to study a particular problem given a set of assumptions and a level of abstraction.
+    % Figure Mitri
 
 
 
@@ -157,7 +186,6 @@
 
 
 %%% ----------------------- ARTICLE 1 ----------------------- 
->>>>>>> 470e146f2de49e60ea4f124a39f2a2bdad69c07e
 \section{To Cooperate or not to Cooperate: why Behavioural Mechanisms Matter}
   \subsection{Introduction}
     It is well known that, in the absence of genetic relatedness, altruistic behaviours in which individuals pay a fitness cost for the benefit of others cannot evolve by natural selection \cite{Hamilton1964,West2007a}. However, it is often assumed that mutualistic behaviours, wherein individuals collectively gain a common benefit~\cite{Leimar2003, Leimar2010}, do not pose such a problem, and are therefore of limited interest to evolutionists: they simply evolve because they benefit the individuals who express them.

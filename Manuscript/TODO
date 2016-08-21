@@ -16,7 +16,7 @@ BIBLIO: - Social evolution theory for microorganisms.
 
 				- Trivers, R.L. 1985. Social Evolution. Benjamin/Cummings, Menlo Park, CA.
 
-				!!! - Axelrod, R., and Hamilton, W.D. (1981). The evolution of coopera- tion. Science 211, 1390–1396.
+				!!! - Axelrod, R., and Hamilton, W.D. (1981). The evolution of cooperation. Science 211, 1390–1396.
 				66.
 
 				!! - Trivers, R.L. (1971). The evolution of reciprocal altruism. Q. Rev. Biol. 46, 35–57
@@ -60,7 +60,9 @@ human cooperation: the interdependence hypothesis. Curr Anthropol 53:673–692
 
 				- R. E. Lenski, C. Ofria, R. T. Pennock, and C. Adami, “The evolutionary origin of complex features" -> AVIDA DA DA
 
-				- The complexity of Cooperation: Agent-based Models of Competition and Collaboration
+				- The complexity of Cooperation: Agent-based Models of Competition and Collaboration AXELROD
+
+				- Nolfi, S., and Floreano, D. (2000). Evolutionary Robotics: The Biology, Intelligence, and Technology of Self-Organizing Machines. MIT Press
 
 
 
@@ -92,6 +94,14 @@ CHAPTER 1: - Mentionner Behavioral Ecology quelquepart ? (c'est fait je crois)
 
 					 - Ajouter une partie sur les limites de ce qu'on fait ? Ou les critiques qu'on pourrait se taper ? (typiquement Webb) -> Quelques paragraphes pourraient suffire
 
+					 - Caser cette citation de bâtard de Maynard Smith : 
+					 "so far, we have been able to study only one evolving system and we cannot wait for interstellar flight to provide us with a second. If we want to discover generalizations about evolving systems, we have to look at artificial ones"
+					 		- Voir Doncieux2015a
+
+
+					 	- Reprendre le schéma de Mitri2012 peut-être sympa pour conclure l'intro
+
+
 CHAPTER 2: - Cooperative Multi-Agent Learning: The State of the Art (2005)
 						 Panait, Luke
 
@@ -100,3 +110,9 @@ CHAPTER 2: - Cooperative Multi-Agent Learning: The State of the Art (2005)
 					 - Article de SMA avec coop : Emergence of Cooperation via Intention Recognition , Commitment , and Apology – A Research Summary
 
 					 - Developing Pervasive Multi-Agent Systems with Nature-Inspired Coordination
+
+					 - Dans Doncieux2015a ya une sous-section sur RL et ER
+
+					 - However, as noted in Bongard (2013) “the use of metaheuris- tics (i.e., evolution) sets this subfield of robotics apart from the mainstream of robotics research,” which “aims to con- tinuously generate better behavior for a given robot, while the long-term goal of Evolutionary Robotics is to create general, robot-generating algorithms.” -> Eiben2014
+
+					 - Long (2012) Darwin's devices, ça serait peut-être sympa de le lire
