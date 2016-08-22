@@ -66,6 +66,8 @@ human cooperation: the interdependence hypothesis. Curr Anthropol 53:673–692
 
 				- Simon Garnier -> C'est téléchargé mais faudra le lire un jour
 
+				- Long (2012) Darwin's devices, ça serait peut-être sympa de le lire
+
 
 
 
@@ -73,10 +75,12 @@ human cooperation: the interdependence hypothesis. Curr Anthropol 53:673–692
 
 DISCUSSION: - Population size !
 
-INTRO: - Parler du gène égoiste (et un peu plus de la sélection naturelle de Darwin comme même !)
-			 - Mieux décrire proximate VS ultimate (suivre West2007)
+INTRO: - EXPLIQUER QUE C'EST UNE INTRO GÉNÉRALE ! -> On va donc parler de trucs qui seront plus détaillés et/ou justifiés 				 après (genre EGT et ER)
+			 - Parler du gène égoiste (et un peu plus de la sélection naturelle de Darwin comme même !)
+			 - Mieux décrire proximate VS ultimate (suivre West2007a) et Scott-Phillips2011
 			 		Notamment => how VS why
 			 		Tinbergen1969 est fondateur là-dedans
+			 - Donner un peu plus d'exemple d'altruisme et de mutualisme dans chacune des parties associées
 			 - by-products : greater honeyguide (West2006)
 			 - Bshary2004 si besoin de PLEIN d'exemples de mutualisme
 			 - Rebosser un peu le Leimar2010 pour expliquer mieux le mutualism (avec by-products, investment etc...)
@@ -84,10 +88,17 @@ INTRO: - Parler du gène égoiste (et un peu plus de la sélection naturelle de 
 			 		- caser Bergmüller2007 aussi
 
 			 !!! - Forber2015 (et ceux qu'il cite) pour bien expliquer que nous on s'intéresse à un autre problème que le maintien de la coop sous free-riding ! Et qu'on veut étudier la coordination. Et qu'on étudie le Stag Hunt
+			 	-> "the cognitive problem of effective coordination is more demanding than that of defection"
 
 			 - Citer le Alvard2002 quelque part
 
 			 - Les papiers de Tomasello sur Human cooperation peuvent être très sympa dans l'intro (voir Kabalak2014 pour biblio)
+
+			 - Citer l'article de JB sur les contraintes méchanistiques vu qu'il dit un truc un peu similaire (il faut que deux choses aient évoluer en même temps pour que ça soit bénéfique)
+
+			 - Dans l'intro on introduit plus une THEMATIQUE qu'une PROBLEMATIQUE
+
+			 - Réserver Calcott pour Chapitre 1 ?
 
 CHAPTER 1: - Mentionner Behavioral Ecology quelquepart ? (c'est fait je crois)
 					 - Dans les trucs en IBM (ou ER ?) caser 
@@ -117,4 +128,8 @@ CHAPTER 2: - Cooperative Multi-Agent Learning: The State of the Art (2005)
 
 					 - However, as noted in Bongard (2013) “the use of metaheuris- tics (i.e., evolution) sets this subfield of robotics apart from the mainstream of robotics research,” which “aims to con- tinuously generate better behavior for a given robot, while the long-term goal of Evolutionary Robotics is to create general, robot-generating algorithms.” -> Eiben2014
 
-					 - Long (2012) Darwin's devices, ça serait peut-être sympa de le lire
+
+ACKNOWLEDGMENTS: Mettre une citation à la con, genre:
+										 "I really don't known what I'm doing." --- Arthur Bernard
+										 "Am I really already writing this ?" --- Arthur Bernard
+										 
