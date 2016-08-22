@@ -20,13 +20,56 @@
       \item{Review of the works in ER where cooperation is evolved and where we stand in this context (and why)}
     \end{itemize}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Evolution of Cooperation in Evolutionary Robotics: the Tradeoff between Evolvability and Efficiency}
 
   \subsection{Introduction}
 
-  The evolution of cooperative actions in evolutionary robotics is as much a challenge as an interesting perspective for the design of complex collective systems~\cite{Doncieux2015}. As such, it has been widely studied with very diverse approaches and objectives~\cite{Waibel2009, Hauert2014, Trianni2007, Lichocki2012}. These works often use a clonal paradigm, where each robot has a copy of the same genome. This makes sense as this is the easiest way to ensure cooperation when individuals are expected to display similar behaviors. Moreover, using clones ensures mimal genetic relatedness between individuals, which is known to allow the evolution of altruism~\cite{Waibel2011, Montanier2011}. As such, most research focus on increasing the probability for the cooperative solution to evolve.
+  The evolution of cooperative actions in evolutionary robotics is as much a challenge as an interesting perspective for the design of complex collective systems~\cite{Doncieux2015}. As such, it has been widely studied with very diverse approaches and objectives~\cite{Waibel2009, Hauert2014, Trianni2007, Lichocki2012}. These works often use a clonal paradigm, where each robot has a copy of the same genome. This makes sense as this is the easiest way to ensure cooperation when individuals are expected to display similar behaviors. Moreover, using clones ensures minimal genetic relatedness between individuals, which is known to allow the evolution of altruism~\cite{Waibel2011, Montanier2011}. As such, most research focus on increasing the probability for the cooperative solution to evolve.
 
-    In comparison, the nature of coordination behaviors and their influence on the quality of cooperation has yet to be thoroughly studied.n particular, interactions between clones in evolutionary robotics tend to produce homogeneous behaviors when most coordination tasks could benefit from heterogeneous behaviors. This could be solved by using a non-clonal approach where paired individuals do not use the same genome, and could possibly evolve different behaviors more easily. However, a non-clonal approach may face a \emph{chicken-and  -egg} dilemma: multiple individuals need to behave in a particular fashion for cooperation to be rewarding, but no benefit can be extracted from this behavior unless all individuals cooperate. Therefore, without cooperating partners, those behaviors cannot be selected by the evolution as they do not benefit the individual. This is particularly problematic when a moderately rewarding solitary strategy overshadows a more rewarding, but also more challenging to evolve, cooperative strategy~\cite{Skyrms2004}.
+  In comparison, the nature of coordination behaviors and their influence on the quality of cooperation has yet to be thoroughly studied. In particular, interactions between clones in evolutionary robotics tend to produce homogeneous behaviors when most coordination tasks could benefit from heterogeneous behaviors. This could be solved by using a non-clonal approach where paired individuals do not use the same genome, and could possibly evolve different behaviors more easily. However, a non-clonal approach may face a \emph{chicken-and-egg} dilemma: multiple individuals need to behave in a particular fashion for cooperation to be rewarding, but no benefit can be extracted from this behavior unless all individuals cooperate. Therefore, without cooperating partners, those behaviors cannot be selected by the evolution as they do not benefit the individual. This is particularly problematic when a moderately rewarding solitary strategy overshadows a more rewarding, but also more challenging to evolve, cooperative strategy~\cite{Skyrms2004}.
 
   In this paper, we are interested in the comparison between clonal and non-clonal approaches on two different criteria:
  \begin{itemize}
