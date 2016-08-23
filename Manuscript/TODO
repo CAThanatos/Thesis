@@ -76,7 +76,7 @@ human cooperation: the interdependence hypothesis. Curr Anthropol 53:673–692
 
 DISCUSSION: - Population size !
 
-INTRO: - EXPLIQUER QUE C'EST UNE INTRO GÉNÉRALE ! -> On va donc parler de trucs qui seront plus détaillés et/ou justifiés 				 après (genre EGT et ER)
+INTRO: - EXPLIQUER QUE C'EST UNE INTRO GÉNÉRALE ! -> On va donc parler de trucs qui seront plus détaillés et/ou justifiés après (genre EGT et ER)
 			 - Parler du gène égoiste (et un peu plus de la sélection naturelle de Darwin comme même !)
 			 - Mieux décrire proximate VS ultimate (suivre West2007a) et Scott-Phillips2011
 			 		Notamment => how VS why
@@ -87,6 +87,8 @@ INTRO: - EXPLIQUER QUE C'EST UNE INTRO GÉNÉRALE ! -> On va donc parler de truc
 			 - Rebosser un peu le Leimar2010 pour expliquer mieux le mutualism (avec by-products, investment etc...)
 			 - Invested, extracted and byproduct benefits: A modified scheme for the evolution of cooperation (Connor2007)
 			 		- caser Bergmüller2007 aussi
+
+			 - Ne pas bourrer de photos mais mettre au moins une ou deux images d'animaux qui coopèrent (ou alors genre 4 en carré à différents niveaux de complexité, par exemple: microbes, insectes eusociaux, mammifères (FUCKING HYENAS), humains (ou singes))
 
 			 - Pfeifer, R. and Bongard, J. How the Body Shapes the Way We Think: A New View of Intelligence
 			 			-> Indispensable à citer dans l'intro (je pense)
@@ -105,12 +107,20 @@ INTRO: - EXPLIQUER QUE C'EST UNE INTRO GÉNÉRALE ! -> On va donc parler de truc
 			 - Dans l'intro on introduit plus une THEMATIQUE qu'une PROBLEMATIQUE
 
 			 - Pour introduire la problématique DESIGN, parler des robots industriels con con 
+			 				-> Et donner des exemples de là où ça serait bien d'avoir des robots collectifs
+			 				-> Pas besoin du coup de spécialement expliciter ce qu'est la robotique collective ici, ça permettra de pas faire redit avec l'intro du chapitre 2
 
 			 - Bongard2013 bien à citer pour dire qu'on veut faire un retour de la biologie vers l'ingénierie (sans forcément faire du bio-inspiré)
 
 CHAPTER 1: - Ajouter une partie sur les limites de ce qu'on fait ? Ou les critiques qu'on pourrait se taper ? (typiquement Webb) -> Quelques paragraphes pourraient suffire
 
 					 - Citer du Sabin Lessard pour la partie pop gen
+
+					 - A la fin quand on justifie le fait d'utiliser ER faut dire là aussi en quoi ce qu'on fait NOUS est différent. Genre de dire (on le dit déjà avant) qu'à part Solomon et al. personne ne s'intéresse vraiment en ER à modéliser la coop entre unrelated.
+
+					 - Dans la partie IBM, il va falloir rapidement parler des travaux en swarm robotique sur la modélisation des comportements sociaux d'insectes (genre pomper Swarm Intelligence de Bonateau1999)
+
+					 - Werner1993 a déjà fait de l'évolution de herding !! C'est vachement tôt par rapport à ER donc ça serait intéressant de jeter un coup d'oeil parce que c'est la première fois que j'en entends parler
 
 
 CHAPTER 2: - Cooperative Multi-Agent Learning: The State of the Art (2005)

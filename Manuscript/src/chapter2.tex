@@ -1,13 +1,36 @@
 \chapter{Design}
+\label{chapter:design}
+
+% \epigraph{So far, we have been able to study only one evolving system and we cannot wait for interstellar flight to provide us with a second. If we want to discover generalizations about evolving systems, we will have to look at artificial ones.}{--- \textup{John Maynard Smith}}
 
 \minitoc[n] % minitoc without title
 
 \section{Introduction}
 
   \subsection{Cooperative Robots for Collective Tasks}
+
+    Multi-robots systems (MRS) essentially gained fame during 1980s under the idea of trying to cope with tasks that classical single robots sometimes could not. MRS can basically be constitued of between two to a thousand robots~\cite{Rubenstein2014} depending on the task at hand. While it may seem counter-productive to develop and control several robots where a single robot could very well achieve the task, using a team of robots has several advantages among which~\cite{Cao1997, Arkin1998}:
+
     \begin{itemize}
-      \item{Where we justify the need to have cooperation between robots (if it has not been said in Intro.III.3)}
+      \item{The parallel execution of multiple robots allow the task to be achieved faster.}
+      \item{Several robots can ensure robustness through \emph{redundancy}.}
+      \item{It can be both cheaper and simpler to produce several simple robots that a single complex one (especially if the robot is expected to suffer destruction).}
+      \item{It may be necessary to distribute several robots at the same time to achieve the task, in which case a single robot could obviously not.}
     \end{itemize}
+
+    -> Parler de CEBOT et Herd Nerd qui sont un peu les premiers (Parker1994)
+
+    -> Heterogeneous VS Homogeneous, decentralized VS centralized: control architecture
+
+    -> Biological inspiration (Cao) == Swarm ?
+
+    -> Swarm
+
+    -> self-organization
+
+    -> DAI
+
+
 
   \subsection{Designing Collective Robots}
     \begin{itemize}
