@@ -7,6 +7,7 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-c', '--completeBib', help = "Complete bibtex", default = None)
+parser.add_argument('-e', '--excludeFiles', help = "Exclude some files", default = False, action = "store_true")
 args = parser.parse_args()
 
 regexpBibDeb = re.compile(r"^@.+\{(.+),$")
@@ -63,12 +64,27 @@ if args.completeBib != None :
 				if curCitation != None :
 					curCitation += line
 
+listExcludeFiles = list()
+if args.excludeFiles :
+	FILE_EXCLUDE = "./exclude.txt"
+
+	with open(FILE_EXCLUDE, 'r') as fileRead :
+		fileRead = fileRead.readlines()
+
+		for line in fileRead :
+			fileExclude = line.rstrip('\n').replace(" ", "")
+			if os.path.splittext(fileExclude)[1] == ".tex" :
+				listExcludeFiles.append(fileExclude)
+
+	print("Excluding...")
+	for file in listExcludeFiles :
+		print("\t" + file)
 
 
 srcDir = "./Manuscript/src"
 
 regexCite = re.compile(r"\\cite\{([^\}]*)\}")
-listSrcFiles = [os.path.join(srcDir, file) for file in os.listdir(srcDir) if os.path.splitext(file)[1] == ".tex"]
+listSrcFiles = [os.path.join(srcDir, file) for file in os.listdir(srcDir) if os.path.splitext(file)[1] == ".tex" and (!args.excludeFiles or (file not in listExcludeFiles))]
 
 listAlert = list()
 listSrcCitations = {}

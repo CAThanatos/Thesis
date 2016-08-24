@@ -9,26 +9,52 @@
 
   \subsection{Cooperative Robots for Collective Tasks}
 
-    Multi-robots systems (MRS) essentially gained fame during 1980s under the idea of trying to cope with tasks that classical single robots sometimes could not. MRS can basically be constitued of between two to a thousand robots~\cite{Rubenstein2014} depending on the task at hand. While it may seem counter-productive to develop and control several robots where a single robot could very well achieve the task, using a team of robots has several advantages among which~\cite{Cao1997, Arkin1998}:
+    Multi-robots systems (MRS), or sometimes multi-agent robotics~\cite{Dudek1996}, essentially gained fame during 1980s under the idea of having robots cooperation in order to cope with tasks that classical single robots sometimes could not achieve. CEBOT and ACTRESS are famously often cited among the earliest successful MRS. CEBOT~\cite{Fukuda1988} (for CELlular roBOTic system) is a decentralized architecture inspired by cellular organization. The organization of the system is dynamic and robots, which are coupled to one another, can reconfigure their structure if the environment changes. This system is based on hierarchical organization where "master cells" (which are also robots) can communicate with other master cells and allocate subtasks to all the agent in the system. In comparison, in ACTRESS~\cite{Asama1989} (ACtor-based Robot and Equipments Synthetic System) the system is composed of three robots and three workstations. One of these workstations is operated by an human, one is used as image processing and the last one manages the environment. Given this heterogeneous group of six agents, the goal is for the robots to perform a purely collective task (i.e. that could not be achieved by a single robot) like pushing an object. This is particularly interesting in designing efficient communication between any level of organization.
+
+    MRS can basically be constitued of between two to a thousand of autonomous robots~\cite{Rubenstein2014} depending on the task at hand. While it may seem counter-productive to develop and control several robots where a single robot could very well achieve the task, using a team of robots has several advantages among which~\cite{Cao1997, Arkin1998}:
 
     \begin{itemize}
       \item{The parallel execution of multiple robots allow the task to be achieved faster.}
-      \item{Several robots can ensure robustness through \emph{redundancy}.}
+      \item{Several robots can ensure robustness and reliability through \emph{redundancy}.}
       \item{It can be both cheaper and simpler to produce several simple robots that a single complex one (especially if the robot is expected to suffer destruction).}
       \item{It may be necessary to distribute several robots at the same time to achieve the task, in which case a single robot could obviously not.}
     \end{itemize}
 
-    -> Parler de CEBOT et Herd Nerd qui sont un peu les premiers (Parker1994)
+    This implies that there are several crucial features that are often expected of MRS~\cite{Parker1994}. But it is important to note that because applications vary greatly, MRS are really different in design. This means that some of these features may not be present depending on the task at hand or the architectures adopted. First, MRS are supposed to be \emph{adaptable} and \emph{flexible}. Most often, this adaptability is found at the level of the agent, where we expect robots to react to a change in the environment and, most importantly, to a change in or induced by the other robots. This adaptability also means that, in the less decentralized systems, the control system should adapt the global organization accordingly. Then, a MRS should be \emph{robust}. This basically means that it should that the system should not be too much impacted by any failure. This is easier said than done but, as we previously said, this is also one of the main advantages of such an approach. Because robots are expected to be autonomous, it is possible to design the system so that a fault on one or several robots does not critically impact the whole system. This also means that in system such as CEBOT where some robots (in this case the "master cells") have a particular as organizers, achieving full robustness is harder and necessitates that such happening is anticipated during the design. And because MRS can be used to conduct several tasks as the same time, robots must also be able to allocate the tasks according to the actual functionning robots. Finally, it is often expected of MRS to be fully \emph{autonomous}. This means that the system as well as all the agent from which it is comprised should be able to act without human intervention. In particular, the system should be able to face the unexpected without having to wait for human control for a long time. Those features mean that MRS are most adequate in several classical robotics tasks. The most famous tasks include: foraging, object transportation, localization and mapping or path planning~\cite{Farinelli2015}.
 
-    -> Heterogeneous VS Homogeneous, decentralized VS centralized: control architecture
+    As we previously said, applications vary greatly. Thus there is no canonical architecture for a MRS but rather different paradigms to choose from~\cite{Cao1997, Parker2008}. First, the control of a MRS can be \emph{centralized} or \emph{decentralized}. In centralized architecture, a single agent will be responsible for controlling the system. This means that, while this agent has full knowledge other the whole system, which should theoretically allow for efficient control, this agent represents a critical point for failures. Therefore, the MRS which follow this sort of organization are rare~\cite{Parker2008} and most MRS use a decentralized approach. Decentralized architectures can be of two types: \emph{hierarchical} or \emph{distributed}~\cite{Cao1997}. In a hierarchical architecture, the system is locally centralized some agents will be in charge of a group of other agents to organize the task at hand. In comparison, in a distributed system, all agents are equal in control which, while robust, implies that it is harder to achieve coherence between every agents with relation to the task to accomplish.
+
+    Another important design choice in term of architecture (and which is greatly relevant with relation to our problem) is on the subject of team composition: \emph{homogeneous} or \emph{heterogeneous}. In an homogeneous team, individuals are all identical in terms of both control (software) and morphological and sensory capabilities (hardware). In comparison, heterogeneous robots vary in one or the other. Most works in MRS have often been focused on homogeneous teams (TD: peut-être vérifier si récemment c'est toujours le cas) as it more practical in term of task allocation: because every agent is the same, they can all achieve the same tasks. Thus it is also more resilient to failures. In comparison, heterogeneous teams are obviously more complex in term of achieving coordination~\cite{Parker1994}. However, they can benefit from the differences between the individual to display more diverse coordinative strategies. Designing heterogenous systems rise problems which are critical in the fields of MRS~\cite{Parker2008}:
+
+    \begin{itemize}
+      \item{How to achieve efficient communications between several different robots ?~\cite{Jung2000}}
+      \item{How to efficient allocate tasks between agents with differing capabilities ?~\cite{Parker2003}}
+    \end{itemize}
+
+    % À réfléchir: un bla bla sur les différentes façons de faire du task allocation et les différentes formes de communication ? Je pense pas que ça soit nécessaire mais si on a de la place... pourquoi pas ?
+
+    Obviously, one of the main problematics in MRS is: how to achieve cooperation ? In their popular (though now ancient) review of the field, Cao and colleagues~\cite{Cao1997} correctly deemed this as one of the research axis in MRS (alongside group architecture and resource conflicts) under the name: the origin of cooperation. We can mainly decompose this problem in two very different approaches. McFarland~\cite{McFarland1996} compared the design of collective actions in robots to a his analysis of group behaviours found in nature which he classifies in two categories (which are biologically really doubtful but do not change the sense of our explanation here) (TD: vérifier que Cao ne le cite pas n'importe comment si possible): \emph{cooperative behaviour} and \emph{eusocial behaviour}. Although without biological analogy, Parker~\cite{Parker2008} classified the design of multirobot cooperation in two similar categories: \emph{intentionally cooperative} systems and \emph{collective swarm} systems. This distinction entails different inspirations in how to ensure cooperation.
+
+    The intentionally cooperative MRS are mostly composed of systems where agents have high knowledge of the other individuals' presence. They are capable of acting according to others' actions and capabilities and can sometimes coordinate thanks to diverse communication strategies. In this sort of MRS that McFarland said corresponds to cooperative behaviours, he deemed the agent to be selfish and to act in a cooperative fashion in order to maximize their utility. From this it stems that this type of MRS can take some inspiration from distributed artificial intelligence (DAI). This field is mainly concerned with the design of distributed systems of intelligent agents~\cite{Cao1997, Panait2005} and is generally considered to be divided in two major areas of studies: distributed problem solving (DPS) and multiagent systems (MAS). To summarize quickly, DPS is mainly concerned with solving problems with several agents. As such, some of its problematics are common to MRS. For example it shares the same concern for trying to efficiently achieve task allocation between multiple agents. However, because in DPS agents are considered to always be cooperative and are usually totally disembodied, few works could contribute to MRS. In comparison, in MAS agents are often rational and, as such, are not de facto cooperators. MAS are thus interested in the collective interactions between agents, sometimes with a strong emphasis on game-theoretic approaches~\cite{Rosenschein1985}. Therefore, this has some theoretical interest for achieving cooperation in MRS. However, some have argued that MAS are not rooted enough in the physical world for them to make a powerful contribution to MRS~\cite{Cao1997, Farinelli2005}. In particular, perfect sensory information is often assumed in MAS which may render difficult direct application in robotics.
+
+    % We believe selfishness is not necessarily associated with intionnally cooperation ?
+
+
+
+    -> This is not always that simple. Genre en swarm on peut faire plein de trucs globallement et des fois ya du knowledge (je crois). Et le swarm peut être classé en MAS (voir Panait2005)
+
+    Biological inspiration more obvious for swarm
 
     -> Biological inspiration (Cao) == Swarm ?
 
-    -> Swarm
+    -> Swarm (dire que c'est ça quand on parle de collective robotics (et dire que ça peut être troublant))
+          -> Parler de la distinction qu'en fait Parker dans Parker2008
 
     -> self-organization
 
-    -> DAI
+    -> Dire que coopération c'est à la base des MRS en fait
+        -> Et mentionner la coordination
+        Tout ça peut arriver en dernier paragraphe (pour bien justifier que c'est ce à quoi on s'intéresse)
 
 
 
@@ -44,6 +70,10 @@
     \end{itemize}
 
 
+    -> Nous on fait pas du MAS: nos agents ne sont pas rationnels (Cao1997 (en gros))
+          -> Mais on fait un peu du MAS quand même parce qu'on a un genre de perfect sensing
+          -> Mais c'est evolutionary robotics justement pour s'écarter un peu des MAS
+          -> Tout en restant en simulation. On peut avoir un argument du genre "meilleur des deux mondes". Surtout qu'il faudra avoir une discussion (rapide) sur simulation vs réel à un moment
 
 
 

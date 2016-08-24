@@ -105,7 +105,8 @@ diff:
 	  git --no-pager show $(HASH1):./$$i > $(BUILD_DIR_DIFF)/$$i.diff.1; \
 	  git --no-pager show $(HASH2):./$$i > $(BUILD_DIR_DIFF)/$$i.diff.2; \
 	  latexdiff $(BUILD_DIR_DIFF)/$$i.diff.2 $(BUILD_DIR_DIFF)/$$i.diff.1 > $(BUILD_DIR_DIFF)/$$i; \
-	  perl -pi -e "s///g" $(BUILD_DIR_DIFF)/$$i; \
+	  perl -pi -e "s/
+//g" $(BUILD_DIR_DIFF)/$$i; \
 	done
 	cd $(BUILD_DIR_DIFF) && $(MAKE) NAME=$(NAME)_diff versioned
 
@@ -116,7 +117,7 @@ diff:
 RANGE = unset
 PARTNAME = $(NAME)
 part: $(PDF)
-	@test $(PARTNAME) != $(NAME) || (echo "You can pass PARTNAME=partname as parameter to specify to what part its correspond")
+	@test $(PARTNAME) != $(NAME) || (echo "You can pass PARTNAME=partname as parameter to specify to what part it corresponds")
 	@test $(RANGE) != unset || (echo "You need pass RANGE=pBegin-pEnd as parameter" && exit 1)
 	pdftk A=$(PDF) cat A$(RANGE) output `git log -1 HEAD --date=rfc --pretty=format:"$(PARTNAME)_%ai_%h_p$(RANGE).pdf%n" | tr ": " "-" | tr -d "+"`
 
