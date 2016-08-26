@@ -62,28 +62,17 @@
 
     Finally, the last famous approach is the \emph{behaviour-based approach}~\cite{Arkin1998}. This approach was mostly created and popularized by the subsumption architecture of Rodney Brooks~\cite{Brooks1986}. This approach is sometimes closely tied with the reactive approach. In a behaviour-based architectures, the robot control in constituted of several basic behaviours, which are organised in separate modules. In a similar way as a reactive approach, these behaviours are directly connected to the sensors and will activate according to certain set of rules. However, in comparison with a purely reactive approach, these behavioural modules can keep a state or a representation of the world which allows for higher reasoning and planning. Those modules are all designed to interact with one another to collectively achieve the goals at hand. In that sense, there is a paradigm close to that of swarm behaviours. Namely, we expect global complexity to emerge from the interaction of local low-level behaviours. Behaviour-based architectures are thus efficient when the environment is dynamic and there needs to be adaptation from the robot but where pure reactivity alone is not sufficient. These architectures are usually designed by a bottom-up approach, where behaviours (which are the building blocks of the system) are added incrementally in an increasing complexity. Lastly, one principal challenge in this approach is to design the action selection, which is the process thanks to which the system will choose which behaviour choose from several~\cite{Pirjanian2000}. Two popular ways to solve this problem is either to base the selection on a prefixed hierarchy between modules or to rely on a voting mechanism.
 
-    Among all these architectures to control a single robot, the behaviour-based is the one used in most of the MRS~\cite{Mataric2008}.
+    In the case of multi-robots systems, they can be characterized by a higher level of architecture which refers to the global control of the system in response to the dynamics of the environment. Mainly, a MRS itself can be characterized as \emph{reactive} or \emph{social deliberative} in this respect~\cite{Iocchi2001, Carpin2001}. Obviously, these concepts are very similar to the architecture of control in a single robot. In a reactive MRS, each individual deals with changes in the environment by itself without the influence of a higher control. Thus there is no particular model of the environment in the system and each agent is individually expected to cope with the changes and adapt. In comparison, in a social deliberative MRS, a global strategy will be planned so that the organization of the whole system (e.g. task allocation) can handle environmental changes. This implies that the system will come with a long-term plan to cope with these changes by using the resources available. This type of MRS may have a global representation of the world shared between the agents but it is not inevitable. It is important to note that the global architecture of the MRS may differ from that of the individuals (e.g. a social deliberative system may be composed of behaviour-based robots).
+
+    Among all the architectures used to control each robot, the behaviour-based approach is the one used in most of the MRS~\cite{Arkin1998, Mataric2008, Parker2008}. The adaptability and simplicity of behaviour-based approaches make them the architecture choice for creating cooperative tasks and achieving coordination~\cite{Mataric1995, Iocchi2001}. For example, Parker proposed and developed the ALLIANCE architecture which she successfully implemented on real robots~\cite{Parker1994}. The main principle was to be able to design a fault-resistant system of heterogeneous robots which could coordinate to accomplish a particular task. This architecture is based on a subsumption architecture~\cite{Brooks1986} with the addition of the concepts of behaviour sets and motivations. A behavior set is composed of low-level behaviors put together to accomplish a particular task. The motivation of a set is used by the robot to know which behaviour set (i.e. action) select based for example on the fact that task is needed or on the fact that another robot is already doing the task. Then, Candea and colleagues developed the ART architecture~\cite{Candea2001} in order to design a team of robots to participate in the RoboCup competition~\cite{Kitano1997}. The RoboCup is an annual competition where teams of robots must compete in a soccer game, which requires to focus on several important challenges of MRS (e.g. collaboration, robot control, reasoning) in an adversarial context. The ART architecture in particular was composed of a team of distributed heterogeneous robots which differed both in hardware and software. These robots were able to vote on which team formation to use and then assign their role by communicating and evaluating the utility of a given role for a certain robot based on local information. Finally more recently, in an article published in Science, Werfel et al. designed independent robots capable of building a structure given by a user~\cite{Werfel2014}. They used a team of homogeneous robots, taking insperation from the mount-building capabilities of termites. These robots could communicate through stigermy (i.e. indirect communication) and followed the building rules automatically compiled from the user structure. The agents were fully reactive so that they could adapt to a change in the current structure (either from robot or human action). Given this last example, it is also interesting to quickly tell where collective robotics (i.e. swarms) stand with relation to architecture. As previously said, the similarities between reactive and the behaviour-based architectures with the paradigm of swarm behaviours are numerours. In particular, they both focus on low-level, local and individual rules so that a global collective and complex behaviour can emerge, which ensures robustness and quick decision making. For these reasons, all collective robotics architecture, when they are not automatically designed (which we will touch upon next), are always behaviour-based~\cite{Brambilla2012, Zoghby2013}.
 
 
-    -> En gros parler de social deliberation et compagnie.
-    -> Dire qu'on fait essentiellement du behaviour-based (Mataric2008)
-    -> Puis parler de ce qui se fait en swarm (c'est aussi du behaviour-based)
-    -> Terminer par des exemples (tirés de mataric2008) dont RoboCup
-    -> Finir en précisant que là c'est plein de cas où les gens écrivent les behaviours à la main
+  \subsection{Learning to Cooperate}
 
-    -> Citer Mataric1995 pour le fait de faire du behaviour-based en MRS
+    -> Brambilla2012 pour le RL aussi
+    -> Parler du multi-agent learning
 
-
-
-
-    -> Clairement va falloir commencer par parler de délibération VS behaviour-based. Après on pourra dire comment c'est fait plus exactement
-    On peut en parler pour un robot puis dire comment ça se passe pour plusieurs robots (comme dans Iocchi2001)
-
-    -> Peut-être préciser qu'on s'intéresse surtout au cas adaptif ? C'est quand même souvent le cas. En gros dire que parce que c'est de la coop et de la coord de surcroit on veut pouvoir être dynamique
-    -> Au passage je peux aussi choisir de ne pas trop m'emmerder, au moins pour le moment. En gros description des approches en single et multi comme prévu
-    -> Puis montrer pourquoi en multi le deliberative c'est chaud
-    -> Expliquer un peu ce qu'est dur aussi dans le behaviour-based
-    -> Citer quelques travaux qui ne font pas de learning juste pour montrer que ça se fait. Pas besoin d'en mettre une chiée. Genre 5 c'est bieng. Un lecteur comprend bien vite l'intérêt de faire du learning et ça sera expliqué après
+    -> L-ALLIANCE c'est ALLIANCE avec du learning ? Si c'est le cas ça peut être très sympa d'en parler en ouverture.
 
     \begin{itemize}
       \item{General (quick) review on the design of collective robots without ER}
@@ -94,10 +83,6 @@
     \begin{itemize}
       \item{Review of the works in ER where cooperation is evolved and where we stand in this context (and why)}
     \end{itemize}
-
-    -> Brambilla2012 pour le RL aussi
-    -> Parler du multi-agent learning
-
 
     -> Nous on fait pas du MAS: nos agents ne sont pas rationnels (Cao1997 (en gros))
           -> Mais on fait un peu du MAS quand même parce qu'on a un genre de perfect sensing
