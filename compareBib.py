@@ -6,7 +6,7 @@ import sys
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-c', '--completeBib', help = "Complete bibtex", default = None)
+parser.add_argument('-c', '--completeBib', help = "Complete bibtex", type = str, default = None, nargs = '+')
 parser.add_argument('-e', '--excludeFiles', help = "Exclude some files", default = False, action = "store_true")
 args = parser.parse_args()
 
@@ -37,32 +37,46 @@ with open(fileBibManuscript, 'r') as fileRead :
 			if curCitation != None :
 				curCitation += line
 
+	if curCitation != None :
+		if citationKey in hashBibManuscript.keys() :
+			print("Error ! " + citationKey + " appears two times in " + fileBibManuscript)
+		else :
+			hashBibManuscript[citationKey] = curCitation
+
+
 newHashBibManuscript = dict(hashBibManuscript)
 
 hashBib = {}
 if args.completeBib != None :
-	with open(args.completeBib, 'r') as fileRead :
-		fileRead = fileRead.readlines()
+	for bibFile in args.completeBib :
+		with open(bibFile, 'r') as fileRead :
+			fileRead = fileRead.readlines()
 
-		curCitation = None
-		citationKey = None
-		for line in fileRead :
-			s = regexpBibDeb.search(line)
+			curCitation = None
+			citationKey = None
+			for line in fileRead :
+				s = regexpBibDeb.search(line)
 
-			if s:
-				if curCitation != None :
-					if citationKey in hashBib.keys() :
-						print("Error ! " + citationKey + " appears two times in " + args.completeBib)
-					else :
-						hashBib[citationKey] = curCitation
-					curCitation = None
-					citationKey = None
+				if s:
+					if curCitation != None :
+						if citationKey in hashBib.keys() :
+							print("Error ! " + citationKey + " appears two times in " + bibFile)
+						else :
+							hashBib[citationKey] = curCitation
+						curCitation = None
+						citationKey = None
 
-				citationKey = s.group(1)
-				curCitation = line
-			else :
-				if curCitation != None :
-					curCitation += line
+					citationKey = s.group(1)
+					curCitation = line
+				else :
+					if curCitation != None :
+						curCitation += line
+
+			if curCitation != None :
+				if citationKey in hashBib.keys() :
+					print("Error ! " + citationKey + " appears two times in " + bibFile)
+				else :
+					hashBib[citationKey] = curCitation
 
 listExcludeFiles = list()
 if args.excludeFiles :
@@ -84,7 +98,7 @@ if args.excludeFiles :
 srcDir = "./Manuscript/src"
 
 regexCite = re.compile(r"\\cite\{([^\}]*)\}")
-listSrcFiles = [os.path.join(srcDir, file) for file in os.listdir(srcDir) if os.path.splitext(file)[1] == ".tex" and (!args.excludeFiles or (file not in listExcludeFiles))]
+listSrcFiles = [os.path.join(srcDir, file) for file in os.listdir(srcDir) if os.path.splitext(file)[1] == ".tex" and (not args.excludeFiles or (file not in listExcludeFiles))]
 
 listAlert = list()
 listSrcCitations = {}
@@ -114,8 +128,8 @@ for file in listSrcFiles :
 								if args.completeBib != None :
 									if citation not in newHashBibManuscript.keys() :
 										if citation not in hashBib.keys() :
-											print("\t\t--- ALERT ! Citation key " + citation + " not in " + args.completeBib)
-											listAlert.append(citation)
+											print("\t\t--- ALERT ! Citation key " + citation + " not in bib completion !")
+											listAlert.append(citation + " - " + os.path.basename(file))
 										else :
 											newHashBibManuscript[citation] = hashBib[citation]
 
