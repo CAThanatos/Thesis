@@ -60,11 +60,11 @@ TEXI2DVI_FLAGS = --build-dir=$(BUILD_DIR) --batch
 TEXI2DVI_FLAGS += -I $(STYLE_DIR) -I $(FIGURES_DIR) -I $(BIB_DIR) -I $(PKG_DIR) -I ./
 
 clean:
-	rm -rf vc.info
+	# rm -rf vc.info
 	rm -rf $(BUILD_DIR)
 	rm -rf $(PDF)
 
-$(PDF): $(DEP) vc.info
+$(PDF): $(DEP) #vc.info
 	PDFLATEX=xelatex $(TEXI2PDF) $(TEXI2DVI_FLAGS) -o $@ $<
 
 ##############################################################################
@@ -80,8 +80,8 @@ glossary: $(DEP)
 ### Git handling
 
 # Generates file with information about current git revision
-vc.info: $(DEP)
-	$(PWD)/bin/vc
+# vc.info: $(DEP)
+# 	$(PWD)/bin/vc
 
 # Generates a pdf file named with the current git revision
 versioned: $(PDF)
@@ -105,8 +105,7 @@ diff:
 	  git --no-pager show $(HASH1):./$$i > $(BUILD_DIR_DIFF)/$$i.diff.1; \
 	  git --no-pager show $(HASH2):./$$i > $(BUILD_DIR_DIFF)/$$i.diff.2; \
 	  latexdiff $(BUILD_DIR_DIFF)/$$i.diff.2 $(BUILD_DIR_DIFF)/$$i.diff.1 > $(BUILD_DIR_DIFF)/$$i; \
-	  perl -pi -e "s/
-//g" $(BUILD_DIR_DIFF)/$$i; \
+	  perl -pi -e "s///g" $(BUILD_DIR_DIFF)/$$i; \
 	done
 	cd $(BUILD_DIR_DIFF) && $(MAKE) NAME=$(NAME)_diff versioned
 

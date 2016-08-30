@@ -97,7 +97,7 @@ if args.excludeFiles :
 
 srcDir = "./Manuscript/src"
 
-regexCite = re.compile(r"\\cite\{([^\}]*)\}")
+regexCite = re.compile(r"\\parencite\{([^\}]*)\}")
 listSrcFiles = [os.path.join(srcDir, file) for file in os.listdir(srcDir) if os.path.splitext(file)[1] == ".tex" and (not args.excludeFiles or (file not in listExcludeFiles))]
 
 listAlert = list()
