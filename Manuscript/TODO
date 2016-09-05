@@ -51,8 +51,9 @@ human cooperation: the interdependence hypothesis. Curr Anthropol 53:673–692
 
 				- R.C. Arkin: Behavior-Based Robotics (1998)
 
-				- W.D. Hamilton. Geometry for the selfish herd 1971
+				- Frank, S.A. (2003). Repression of competition and the evolution of cooperation. Evolution 57, 693–705.
 
+				- Caraco T. and Brown J. 1986. ‘A game between communal breeders: when is food sharing stable’. Journal of Theoretical Biology 118: 379–393
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
@@ -69,7 +70,8 @@ DISCUSSION: - Population size !
 
 
 INTRO: - EXPLIQUER QUE C'EST UNE INTRO GÉNÉRALE ! -> On va donc parler de trucs qui seront plus détaillés et/ou justifiés après (genre EGT et ER)
-			 - Parler du gène égoiste (et un peu plus de la sélection naturelle de Darwin comme même !)
+
+
 			 - Mieux décrire proximate VS ultimate (suivre West2007a) et Scott-Phillips2011
 			 		Notamment => how VS why
 			 		Tinbergen1969 est fondateur là-dedans
@@ -117,6 +119,8 @@ CHAPTER 1: - Ajouter une partie sur les limites de ce qu'on fait ? Ou les critiq
 					 - Dans la partie IBM, il va falloir rapidement parler des travaux en swarm robotique sur la modélisation des comportements sociaux d'insectes (genre pomper Swarm Intelligence de Bonateau1999)
 
 					 - Werner1993 a déjà fait de l'évolution de herding !! C'est vachement tôt par rapport à ER donc ça serait intéressant de jeter un coup d'oeil parce que c'est la première fois que j'en entends parler
+
+					 - Va falloir citer (et lire) Simon Garnier et probablement John Long
 
 
 CHAPTER 2: - Cooperative Multi-Agent Learning: The State of the Art (2005)
