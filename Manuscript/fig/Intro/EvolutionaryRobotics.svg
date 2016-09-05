@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="EvolutionaryRobotics.svg"
-   inkscape:export-filename="/home/arthur/Documents/Thesis/Manuscript/fig/Intro/EvolutionaryRobotics.png"
+   inkscape:export-filename="/home/abernard/Documents/Thesis/Manuscript/fig/Intro/EvolutionaryRobotics.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -42,16 +42,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.9899495"
-     inkscape:cx="513.22651"
-     inkscape:cy="511.60133"
+     inkscape:zoom="1.4"
+     inkscape:cx="456.31364"
+     inkscape:cy="482.17457"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:snap-bbox="true"
-     inkscape:window-width="1301"
-     inkscape:window-height="744"
-     inkscape:window-x="65"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     inkscape:window-x="1985"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
      showguides="true"
@@ -795,5 +795,17 @@
        id="path3977"
        inkscape:connector-curvature="0"
        transform="translate(0,308.2677)" />
-  </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3108"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-33.382812,350.84121)"><flowRegion
+         id="flowRegion3110"><rect
+           id="rect3112"
+           width="202.14288"
+           height="70.714294"
+           x="557.85712"
+           y="273.38019" /></flowRegion><flowPara
+         id="flowPara3114"
+         style="font-size:32px;font-weight:bold;-inkscape-font-specification:Sans Bold">FITNESS</flowPara></flowRoot>  </g>
 </svg>
