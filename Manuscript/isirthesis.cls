@@ -463,6 +463,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Epigraphs
 \usepackage{epigraph}
+%\epigraphfontsize{\small\itshape}
+\epigraphsize{\small}
+\setlength\epigraphwidth{12cm}
+\setlength\epigraphrule{0pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Automatic generation of title page

@@ -12,6 +12,23 @@ args = parser.parse_args()
 
 regexpBibDeb = re.compile(r"^@.+\{(.+),$")
 
+if args.completeBib != None :
+	bibFile = ''
+
+	if 'BIBPATH' not in os.environ.keys():
+		print("Warning: no BIBPATH environment variable set. Using local .bib file.")
+
+		if os.path.isfile("./Biblio.bib") :
+			bibFile = "./Biblio.bib"
+		else :
+			print("Warning: no local .bib file. Impossible to performe complete bibtex.")
+			sys.exit(0)
+	else:
+		bibFile = os.path.join(os.environ['BIBPATH'], "Biblio.bib")
+
+	args.completeBib.append(bibFile)
+	
+
 hashBibManuscript = {}
 fileBibManuscript = "./Manuscript/bib/thesis.bib"
 with open(fileBibManuscript, 'r') as fileRead :
