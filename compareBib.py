@@ -146,7 +146,7 @@ if args.completeBib != None :
 		cpt = 0
 		while cpt < len(sortCitations) :
 			if sortCitations[cpt] in listSrcCitations.keys() :
-				fileWrite.write(newHashBibManuscript[sortCitations[cpt]] + "\n")
+				fileWrite.write(newHashBibManuscript[sortCitations[cpt]])
 			
 			cpt += 1
 
