@@ -142,22 +142,10 @@
 
     But several critical design decisions impact the efficiency of ER when applied to robotics. In particular, the selection of individuals can act at the level of \emph{group} or that of the \emph{individual}. Additionally, whatever the level of selection the groups of robots can be \emph{homogeneous} or \emph{heterogeneous}, something we already mentionned in previous Sections. Both these decisions entail critical consequences on the evolution of coopertive actions~\parencite{Waibel2009}. First, the level of selection caracterize how fitness is distributed to each individual. This is similar to the issue of credit assignement we briefly mentioned in Subsection~\ref{subsection:RL}. In particular, according to the level of selection, the fitness value is given to the whole group of individuals or to each individual separately. In comparison, the distinction between homogeneity and heterogeneity refers to the composition of the group. As we previously said, the decision on this matter is crucial to the design of any MRS~\parencite{Quinn2003}. Homogeneity tends to facilite the evaluation of individuals as well as the emergence of cooperation: because fitness is attributed to the group, they all benefit from the actions of others. In particular, achieving coordination is thus easier. In comparison, heterogeneous individuals may have conflicting needs and could act selfishly. But in return, it may is by definition easier to evolve heterogeneous behaviours. While there is an interest in ER in heterogeneous teams of individuals~\parencite{Lichocki2013}, most of the research in the field concerned with evolving cooperation adopt an homogeneous approach (most often under group selection). In particular, a large part of the litterature is concerned with swarm robotics which, by definition, are constituted of homogeneous individuals.
 
-    In our case we want heterogeneous
+    In the context of this thesis, we are concerned with the evolution of cooperation among a group of heterogeneous robots. In particular, we want to focus on the nature of the coordination strategies evolved. Thus we consider teams of two genetically unrelated robots. While these two robots are morphologically identical, the heterogeneity in their control raises the issue of the evolution of cooperation when selfish behaviours can emerge. From this stems a tradeoff between using heterogeneity to evolve efficient coordination strategies and difficulty to evolve cooperation. This issue is discussed in the first article. In a second article, we choose to focus solely on evolving a particular type of coordination: division of labour. Because we want this strategy to appear among heterogenous individuals, we study the issue of achieving genotypic polymorphism. Namely, we multiple different behaviours encoded by different genotypes to coexist at the same time in a single population.
 
-    Even when only control is heterogeneous
+    To conclude this introduction to this part of the manuscript, we want to clarify that as in the first part of the thesis, we do not use real robots. We consider our contributions here to be mainly theoretical and act as general design concepts for others in the field. In particular, our robotic agents and settings are pretty simple so that we do not make much assumptions that would relate only to our study. Additionally, applying ER on real robots is still considered to be a challenge in the field~\parencite{Floreano2008, Doncieux2015a}. We believe that the recent developments aiming at either simplying experiments on physical robots or increasing transferability between simulation and reality to be beyond the scope of this here thesis. 
 
-    -> Nous on fait de l'hétérogène de contrôle uniquement
+    % Faudra dire en quoi on est différent de Potter2001 sur le premier papier (c'est du compétitif, c'est la seule différence ?)
 
-    -> Nous on fait pas du MAS: nos agents ne sont pas rationnels (Cao1997 (en gros))
-          -> Mais on fait un peu du MAS quand même parce qu'on a un genre de perfect sensing
-          -> Mais c'est evolutionary robotics justement pour s'écarter un peu des MAS
-          -> Tout en restant en simulation. On peut avoir un argument du genre "meilleur des deux mondes". Surtout qu'il faudra avoir une discussion (rapide) sur simulation vs réel à un moment
-
-    -> Bien justifier le fait qu'on fait du simulated robots (Nolfi en parle dans le handbook). Pourquoi on faire du vrai robot c'est chaud en ER ? Quels sont les problèmes pour passer de simul à vrais robots (reality gap) ? Et pourquoi dans notre cas on s'en fout un peu ? 
-          -> Nous on s'en fout parce qu'on fait du théorique (en gros)
-
-    Faudra dire en quoi on est différent de Potter2001 sur le premier papier (c'est du compétitif, c'est la seule différence ?)
-
-    !!! Quinn a dit c'est peut-être bien l'aclonal !!!
-
-    theoretical
+    % !!! Quinn a dit c'est peut-être bien l'aclonal !!!
