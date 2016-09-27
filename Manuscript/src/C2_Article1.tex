@@ -1,3 +1,36 @@
+\chapter{Evolution of Cooperation in Evolutionary Robotics: the Tradeoff between Evolvability and Efficiency}
+\label{chapter:C2_article1}
+
+\minitoc[n] % minitoc without title
+
+This Chapter is focused on the evolution of coordination behaviours in a task of collective foraging. We organize this chapter as a published paper in an intertional conference:
+
+\begin{quote}
+  \fullquote{Bernard2015}
+\end{quote}
+
+
+We are interested in the subject of evolving cooperation among a population of heterogeneous robots. In particular, we aim at comparing an homogeneous approach (which we call here the clonal approach) and an heterogeneous approach. In evolutionary robotics, the most classical approach is to use an homogeneous group of robots. As we previously discussed in Chapter~\ref{chapter:design}, this is easiest way to ensure the evolution of cooperation because the fitness of the individual is the same as that of the group by design. However, this means that we often only focus on the \emph{evolvability} of the cooperative solution~\footnote{It is important to note that the term "evolvability" has a strong connotation in the field of evolutionary robotics and may sometimes refer to various definitions. In particular, one such definition is that it represents the capacity for an individual to adapt to environmental change~\parencite{Wagner1996}. This is a rising topic in artificial evolution~\parencite{Banzhaf2006, Lehman2013, Doncieux2015a, Taylor2016} and as such we do not want to create confusion with our use of the term here. In this article, evolvability strickly refers to the capacity to evolve a particular trait (in our case, cooperation)}. However groups of heterogeneous robots may achieve greater \emph{efficiency} in particular when coordination is necessary. Because individuals can adopt distinct behaviours, they could evolve more diverse coordination strategies. Yet heterogeneity may hinder the evolution of cooperation in an environment where it is possible for robots to act in a selfish manner. We thus want to compare both these approaches in such an environment on these two criteria: evolvability and efficiency. By evolvability we refer to the probability to evolve cooperative individuals while efficiency corresponds to the performance of the cooperative behaviours.
+
+% Parler du fait qu'on s'intéresse plus à proba de coop que quality de coop ?
+
+To that end, we designed a simple collective foraging task inspired by the stag hunt. More precisely, two individuals are placed in an arena where they can forage two different types of targets: green and purple. Green targets reward the same wheter they are collected alone or cooperatively. In comparison, purple targets reward need to be collected in a cooperative fashion but reward more than the green one. Given this setting, we are interested in the evolution of cooperative behaviours, i.e. individuals foraging the purple targets cooperatively. We study three different approaches w.r.t. team composition:
+
+\begin{itemize}
+  \item{A control setup, where both individuals comes from the same population but are genetically different.}
+  \item{A clonal setup, where the two individuals are clones of each other.}
+  \item{A coevolution setup, where each individual comes from a different population.}
+\end{itemize}
+
+We thus compare the results of two heterogeneous approaches (control and coevolution) and a clonal approach.
+
+We reval that a tradeoff between evolvability and efficiency exists in our foraging task. In particular, the clonal approach proves to be the best w.r.t. evolving cooperative behaviours. In comparison, the coevolution approach allows the emergence of more efficient cooperative behaviours but evolves cooperation with a lesser probability than the clonal approach. Furthermore, the coevolution setup allows the evolution of division of labour through a leader/follower strategy. We then focus on overcoming this tradeoff by trying to increase evolvability and efficiency in every setup. 
+
+To that end we use incremental evolution. The individuals are first evolved in a simpler cooperative task where they have to cross the same waypoints in the same order. They are then evolved in the foraging task presented before. We show that, while the probability to evolve cooperation increases in the coevolution setup, no significant differences are observed in the clonal setup. This leads to the coevolution approach being the best approach on both evolvability and efficiency. However, incremental evolution implies that it is necessary to pre-evolve the individuals in an other task. We thus reveal a new tradeoff: it is possible to evolve efficient coordination strategies with high evolvability but under additional computational costs.
+
+
+
+
 \section{Evolution of Cooperation in Evolutionary Robotics: the Tradeoff between Evolvability and Efficiency}
 
   \subsection{Introduction}
@@ -9,7 +42,7 @@
   In this paper, we are interested in the comparison between clonal and non-clonal approaches on two different criteria:
  \begin{itemize}
     \item{\emph{Evolvability} of cooperation, which is the number of successful runs where cooperation evolved.}
-    \item{\emph{Efficiency} of cooperation. This criteria is focused on the quality of the evolved behaviors and is determined by the   performance (w.r.t. fitness score) of the coordination strategies.}
+    \item{\emph{Efficiency} of cooperation. This criteria is focused on the quality of the evolved behaviors and is determined by the performance (w.r.t. fitness score) of the coordination strategies.}
   \end{itemize}
 
   To that end, we design a foraging task where both cooperative and solitary strategies are possible but where cooperation provides the largest reward. This task is favored by the evolution of efficient cooperative behaviors and we compare different approaches on both criteria. The first approach is a straightforward implementation of the literature where interacting individuals are clones. In comparison, the second approach is a rather extreme implementation of a non-clonal approach: we use coevolution, where individuals are from two different populations, and where fitness scores are computed independently for each individual. While this scheme is typical of competitive coevolution~\parencite{Floreano1997, Floreano1998, Panait2005}, the nature of the task considered here makes cooperation more interesting, as both individuals can selfishly benefit from being cooperative.
