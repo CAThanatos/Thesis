@@ -1,4 +1,4 @@
-\chapter{Evolution of Cooperation in Evolutionary Robotics: the Tradeoff between Evolvability and Efficiency}
+\chapter{The Tradeoff between Evolvability and Efficiency in the Evolution of Cooperation}
 \label{chapter:C2_article1}
 
 \setcounter{secnumdepth}{0}
@@ -31,7 +31,7 @@ To that end we use incremental evolution. The individuals are first pre-evolved 
 \clearpage
 
 
-
+\chapter{Evolution of Cooperation in Evolutionary Robotics: the Tradeoff between Evolvability and Efficiency}
 
 \section{Abstract}
   In this article, we are intested in the evolution of specialisation among a single population of heterogeneous robotic agents in a cooperative foraging task. In particular, we want to compare (1) the emergence and (2) fixation of genotypic polymorphism under two different selection methods: elitist and fitness-proportionate. We show that, while the emergence of specialists is easy under an elitist selection, this method cannot maintain heterogeneous behaviours throughout the whole simulation. In comparison a fitness-proportionate algorithm proves to be inefficient in evolving any cooperative strategy but ensures the conservation of heterogeneity when it is present in the population. We then reveal through additional experiments two key factors for the evolution of heterogenous behaviours in our task: (1) protection of genotypic diversity and (2) efficient selection of partners. We finally demonstrate this assertion and, while our main problem remains unsolved, we provide directions on how it could be successfully approached.
@@ -39,7 +39,7 @@ To that end we use incremental evolution. The individuals are first pre-evolved 
 
 \section{Introduction}
 
-  The evolution of cooperative actions in evolutionary robotics is as much a challenge as an interesting perspective for the design of complex collective systems~\parencite{Doncieux2015}. As such, it has been widely studied with very diverse approaches and objectives~\parencite{Waibel2009, Hauert2014, Trianni2007, Lichocki2012}. These works often use a clonal paradigm, where each robot has a copy of the same genome. This makes sense as this is the easiest way to ensure cooperation when individuals are expected to display similar behaviors. Moreover, using clones ensures minimal genetic relatedness between individuals, which is known to allow the evolution of altruism~\parencite{Waibel2011, Montanier2011}. As such, most research focus on increasing the probability for the cooperative solution to evolve.
+  The evolution of cooperative actions in evolutionary robotics is as much a challenge as an interesting perspective for the design of complex collective systems~\parencite{Doncieux2015a}. As such, it has been widely studied with very diverse approaches and objectives~\parencite{Waibel2009, Hauert2014, Trianni2007, Lichocki2012}. These works often use a clonal paradigm, where each robot has a copy of the same genome. This makes sense as this is the easiest way to ensure cooperation when individuals are expected to display similar behaviors. Moreover, using clones ensures minimal genetic relatedness between individuals, which is known to allow the evolution of altruism~\parencite{Waibel2011, Montanier2011}. As such, most research focus on increasing the probability for the cooperative solution to evolve.
 
   In comparison, the nature of coordination behaviors and their influence on the quality of cooperation has yet to be thoroughly studied. In particular, interactions between clones in evolutionary robotics tend to produce homogeneous behaviors when most coordination tasks could benefit from heterogeneous behaviors. This could be solved by using a non-clonal approach where paired individuals do not use the same genome, and could possibly evolve different behaviors more easily. However, a non-clonal approach may face a \emph{chicken-and-egg} dilemma: multiple individuals need to behave in a particular fashion for cooperation to be rewarding, but no benefit can be extracted from this behavior unless all individuals cooperate. Therefore, without cooperating partners, those behaviors cannot be selected by the evolution as they do not benefit the individual. This is particularly problematic when a moderately rewarding solitary strategy overshadows a more rewarding, but also more challenging to evolve, cooperative strategy~\parencite{Skyrms2004}.
 
