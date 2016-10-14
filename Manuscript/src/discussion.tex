@@ -32,14 +32,14 @@ The contributions of this thesis have been divided in two parts that, while they
 			Moreoever, the evolution of communication has already been studied in several works in evolutionary robotics. We already mentioned in Chapter~\ref{chapter:model} that some have been interested in the general evolution of communication between foraging robots~\parencite{Floreano2007}, information suppression~\parencite{Mitri2009} or the role of historical contingencies on the evolution of signaling strategies~\parencite{Wischmann2012}. As with the evolution of cooperation, few have been interested in the role of communication among unrelated individuals. A notable counterexample is the work of Solomon et al.~\parencite{Solomon2012} who modeled communication strategies between hyenas. However, the impact of communication on the origin of mutualistic actions has not been studied.
 
 
-		\subsection{Cooperation between bigger groups of agents}
+		\subsubsection{Cooperation between bigger groups of agents}
 
 			Our initial inspiration was the game theoretical framework of the stag hunt. As such interactions take place between only a pair of individuals. However, it could be interesting to increase the number of agents and to study how the evolutionary dynamics would change. In particular, in our second study we have been interested the optimization of group-traits by way of individual selection. We showed that the transition between multiple equilibria could occur without any group-level mechanism. As we provided no evidence that our demonstration could be scaled up to more than two individuals, it could be argued that what we consider a group-trait is limited in this context. 
 
 			However, we believe that similar results would be observed in larger groups of individuals. We even hypothesize that the results could be more explicit in this case. Let's imagine that we consider a scaled-up version of our study where interactions take place between $5$ agents. The stag would now require that the $5$ individuals cooperate together to reap the benefits of the hunt. Because the coordination of $5$ individuals is more challenging than that of a pair, the evolution of efficient coordination strategies would be even more favored. As such, the evolution of asymmetrical behaviours like the leader/follower should have a bigger impact on the transition towards the optimum. Indeed, it would be impossible for a single mutant to lead the group to stag hunting without an asymmetrical strategy. We ran preliminary experiments on increasing the number of agents in our simulation (with groups of $3$, $4$ or $5$ robots). However, as of today we are faced with the fact that, given our parameters, it is challenging for the robots to evolve an efficient coordination strategy.
 
 
-		\subsection{Online evolution}
+		\subsubsection{Online evolution}
 
 			An interesting continuation of our work would be to model the evolution of mutualistic cooperation in an environment-driven online paradigm. More precisely, in the classical framework of evolutionary robotics we use an offline evolutionary algorithm. This initially means that there is a separation between the design of a robot and its deployment; robots are evolved in a different environment that the one where they are used. In comparison, under an online paradigm evolution occurs directly in the operational environment. The field of embodied evolution~\parencite{Watson2002} was created in order to address this question and in particular the issue of transferability that stems from evolving robots in an offline manner. As such, embodied evolution is mainly concerned with design questions. In our case, it would be interesting to use online evolution as another manner in which to model evolutionary phenomena. 
 
@@ -79,7 +79,7 @@ The contributions of this thesis have been divided in two parts that, while they
 
 	    \begin{figure}[hbt]
 	        \begin{center}
-	          \includegraphics[scale = 0.50]{fig/Discussion/Robot.png}
+	          \includegraphics[scale = 0.70]{fig/Discussion/Robot.png}
 	          \caption{\textbf{Physical robot for distributed robotics.}
 	          Picture of a robot designed to be used for our experiments in distributed robotics. This robot is composed of a Thymio-II base which is equipped with two wheels and a collection of sensors, among which proximity sensors. A 3D-printed structure is used to support a raspberry PI, a camera module and a battery. The raspberry PI is used to have a more complex control of the Thymio.} 
 	          \label{fig:thymioPicture}
