@@ -48,6 +48,22 @@ We then use computational analyses to have a deeper understanding of the underly
 \section{Methods}
 \label{sec:methods}
   We evaluate two robotic agents in a $800$ by $800$ units square arena devoid of any obstacles except for the foraging targets. At the beginning of a simulation, $18$ targets are randomly positioned in the environment. While the agents may move freely in the arena, the targets' positions are fixed. For a target to be collected, any agent needs to stay in contact with it for a specified amount of time ($800$ simulation steps). The target is removed after this duration and put back at another random position so that the number of targets is kept the same throughout a simulation. We consider that cooperative foraging happens if both individuals are in contact of the target when it is removed. When an agent collects a target, it is rewarded \textbf{50} if this target has been foraged in a solitary manner or \textbf{250} if both agents have cooperated to collect it.
+  
+  \begin{table}[h]
+    \center{
+      \begin{tabular}{|l|c|}
+        \hline
+        \textbf{Foraging} & \textbf{Reward} \\
+        \hline
+        \hline
+        \textbf{Solitary} & 50 \\
+        \textbf{Cooperatively} & 250 \\
+        \hline
+      \end{tabular}
+    }
+    \caption{Rewards for the foraging of targets, depending on whether they were collected in a solitary or cooperative fashion.}
+    \label{tab:Rewards}
+  \end{table}
 
   Each agent is circular-shaped with a diameter of $20$ units and possesses a collection of different sensory inputs. The first type of inputs is a $90$ degrees front camera and is composed of $12$ rays, each one indicating the type and distance to the nearest object (either another agent or a target). The other type of inputs are $12$ proximity sensors evenly distributed around the agent's body. With a range of twice the agent's diameter, each proximity sensor outputs the proximity of the nearest obstacle in its range.
 
@@ -70,34 +86,24 @@ We then use computational analyses to have a deeper understanding of the underly
   We showed in a previous article~\parencite{Bernard2015} that two cooperative strategies could evolve in this particular task: \emph{turning} (between two \emph{turners}) and \emph{leader/follower} (between a \emph{leader} and a \emph{follower}). Both of these strategies achieve cooperative foraging but with varied efficiency.
 
   \begin{figure}[ht]
-    \centering
-      \begin{subfigure}[]
-        {\label{fig:behaviorTurning} \includegraphics[scale=0.25]{fig/ArticleRob2/behaviorTurning.png}}
-      \end{subfigure}~
-      \begin{subfigure}[]
-        {\label{fig:behaviorLeadership} \includegraphics[scale=0.25]{fig/ArticleRob2/behaviorLeadership.png}}
-      \end{subfigure}
-      \caption{\textbf{Snapshots of the simulation after an entire trial in the foraging task.} The path of each robotic agent from their initial positions (black dots) is represented in red and blue. The blue discs represent the 18 targets in the environment. When a target is foraged by the two agents, a red cross (resp. blue) is drawn on the target if the red agent (resp. blue) arrived on it first. Each snapshot corresponds to a trial where agents adopted a different strategy: {\em (a)}~turning or {\em (b)}~leader/follower.}
-      \label{fig:behaviorTraces}
+    \centerfloat
+      \includegraphics[scale=0.7]{fig/ArticleRob2/figBehaviours.png}
+    \caption{\textbf{Snapshots of the simulation after an entire trial in the foraging task.} The path of each robotic agent from their initial positions (black dots) is represented in red and blue. The blue discs represent the 18 targets in the environment. When a target is foraged by the two agents, a red cross (resp. blue) is drawn on the target if the red agent (resp. blue) arrived on it first. Each snapshot corresponds to a trial where agents adopted a different strategy: {\em (A)}~turning or {\em (B)}~leader/follower.}
+    \label{fig:behaviorTraces}
   \end{figure}
 
-  In the turning strategy, both individuals turn around one another so that they can keep the other individual in their line of sight and stay close to it (see Figure \ref{fig:behaviorTurning}). At the same time, the two individuals try to get closer to a target. This way, as soon as one of the two individuals is in contact with a target, the other individual can join it so the target may be collected cooperatively. Consequently, both individuals adopt a similar behaviour in this strategy and can be described as generalists.
+  In the turning strategy, both individuals turn around one another so that they can keep the other individual in their line of sight and stay close to it (see Figure \ref{fig:behaviorTraces}(A)). At the same time, the two individuals try to get closer to a target. This way, as soon as one of the two individuals is in contact with a target, the other individual can join it so the target may be collected cooperatively. Consequently, both individuals adopt a similar behaviour in this strategy and can be described as generalists.
 
-  In the leader/follower strategy, the individuals specialise in two roles: a leader and a follower. The leader always gets on the target first and checks rarely for its partner. In comparison, the follower tries to keep its leader in view during the entirety of the simulation so that it can get on the same target (see Figure \ref{fig:behaviorLeadership}). Consequently, we observe the expression of two clearly heterogeneous behaviours which implies that both individuals are specialists. More importantly we also showed that, given our agents' capabilities, each phenotype needed to be encoded by a different genotype for specialisation to happen.
+  In the leader/follower strategy, the individuals specialise in two roles: a leader and a follower. The leader always gets on the target first and checks rarely for its partner. In comparison, the follower tries to keep its leader in view during the entirety of the simulation so that it can get on the same target (see Figure \ref{fig:behaviorTraces}(B)). Consequently, we observe the expression of two clearly heterogeneous behaviours which implies that both individuals are specialists. More importantly we also showed that, given our agents' capabilities, each phenotype needed to be encoded by a different genotype for specialisation to happen.
 
-  \begin{figure*}[ht]
+  \begin{figure}[ht]
     \centerfloat
-      \begin{subfigure}[]
-        {\label{fig:Efficiency} \includegraphics[scale=0.28]{fig/ArticleRob2/boxplotFitness.png}}
-      \end{subfigure}~
-      \begin{subfigure}[]
-        {\label{fig:Leadership} \includegraphics[scale=0.28]{fig/ArticleRob2/boxplotLeadership.png}}
-      \end{subfigure}
-      \caption{\textbf{Average reward and leadership proportion with a leader/follower or turning strategy} Boxplots of {\em (a)}~the average reward and {\em (b)}~the leadership proportion over $20$ independent trials for the leader/follower and turning strategies. The leadership ratio of an individual represents the propensity for one individual among the pair to arrive first more often than its partner on a target collected in a cooperative fashion. The position of each target at the beginning of each trial was randomized.}
-      \label{fig:EfficiencyAndLeadership}
-  \end{figure*}
+      \includegraphics[scale=0.9]{fig/ArticleRob2/figEffAndLead.png}
+    \caption{\textbf{Average reward and leadership proportion with a leader/follower or turning strategy} Boxplots of {\em (A)}~the average reward and {\em (B)}~the leadership proportion over $20$ independent trials for the leader/follower and turning strategies. The leadership ratio of an individual represents the propensity for one individual among the pair to arrive first more often than its partner on a target collected in a cooperative fashion. The position of each target at the beginning of each trial was randomized.}
+    \label{fig:EfficiencyAndLeadership}
+  \end{figure}
 
-  Figure~\ref{fig:Efficiency} shows the efficiency of each strategy, defined as the average reward obtained by the two individuals during a simulation over $20$ independent trials (with randomized targets' positions for each trial). We can see that, as expected, the leader/follower strategy achieves a significantly higher efficiency (Mann-Whitney U-test on the average reward over $20$ trials, {\em p}-value $< 0.0001$). This difference in efficiency is directly correlated to a highly significant difference in the proportion of leadership as shown in Figure~\ref{fig:Leadership} (Mann-Whitney U-test on the leadership proportion over $20$ trials, {\em p}-value $< 0.0001$). We compute this proportion by looking at the propensity for one of the two individuals to arrive first more often on a target foraged cooperatively (i.e. the emergence of a leader).
+  Figure~\ref{fig:EfficiencyAndLeadership}(A) shows the efficiency of each strategy, defined as the average reward obtained by the two individuals during a simulation over $20$ independent trials (with randomized targets' positions for each trial). We can see that, as expected, the leader/follower strategy achieves a significantly higher efficiency (Mann-Whitney U-test on the average reward over $20$ trials, {\em p}-value $< 0.0001$). This difference in efficiency is directly correlated to a highly significant difference in the proportion of leadership as shown in Figure~\ref{fig:EfficiencyAndLeadership}(B) (Mann-Whitney U-test on the leadership proportion over $20$ trials, {\em p}-value $< 0.0001$). We compute this proportion by looking at the propensity for one of the two individuals to arrive first more often on a target foraged cooperatively (i.e. the emergence of a leader).
 
 
 
@@ -108,14 +114,15 @@ We then use computational analyses to have a deeper understanding of the underly
 
     \begin{table}[ht]
       \center{
-        \begin{tabular}{lcccc}
+        \begin{tabular}{|l|c|c|c|c|}
           \hline
           \textbf{Pop.} & \textbf{\# L/F} & \textbf{\# Turning} & \textbf{\# NC} & \textbf{Total}\\ 
           \textbf{size} & \textbf{Strat.} & \textbf{Strat.} & \textbf{Strat.} & \\ 
           \hline
-          \textit{20} & 0 & 11 & 0 & \textbf{11}\\
-          \textit{40} & 0 & 11 & 0 & \textbf{11}\\
-          \textit{100} & 1 & 10 & 0 & \textbf{11}\\
+          \hline
+          \textbf{20} & 0 & 11 & 0 & \textbf{11}\\
+          \textbf{40} & 0 & 11 & 0 & \textbf{11}\\
+          \textbf{100} & 1 & 10 & 0 & \textbf{11}\\
           \hline
         \end{tabular}
       }
@@ -142,15 +149,16 @@ We then use computational analyses to have a deeper understanding of the underly
 
     \begin{table}[ht]
       \center{
-        \begin{tabular}{lrcccc}
+        \begin{tabular}{|l|r|c|c|c|c|}
           \hline
           \textbf{Pop.} & \textbf{Followers} & \textbf{\# L/F} & \textbf{\# Turning} & \textbf{\# NC} & \textbf{Total}\\ 
           \textbf{size} & \textbf{added} & \textbf{Strat.} & \textbf{Strat.} & \textbf{Strat.} & \\ 
           \hline
-          \textit{40} & \textit{1} & 0 & 11 & 0 & \textbf{11}\\
-          \textit{40} & \textit{20} & 0 & 11 & 0 & \textbf{11}\\
-          \textit{100} & \textit{1} & 1 & 10 & 0 & \textbf{11}\\
-          \textit{100} & \textit{50} & 2 & 9 & 0 & \textbf{11}\\
+          \hline
+          \textbf{40} & \textit{1} & 0 & 11 & 0 & \textbf{11}\\
+          \textbf{40} & \textit{20} & 0 & 11 & 0 & \textbf{11}\\
+          \textbf{100} & \textit{1} & 1 & 10 & 0 & \textbf{11}\\
+          \textbf{100} & \textit{50} & 2 & 9 & 0 & \textbf{11}\\
           \hline
         \end{tabular}
       }
@@ -171,14 +179,15 @@ We then use computational analyses to have a deeper understanding of the underly
     
     \begin{table}[ht]
       \center{
-        \begin{tabular}{lcccc}
+        \begin{tabular}{|l|c|c|c|c|}
           \hline
           \textbf{Pop.} & \textbf{\# L/F} & \textbf{\# Turning} & \textbf{\# NC} & \textbf{Total}\\ 
           \textbf{size} & \textbf{Strat.} & \textbf{Strat.} & \textbf{Strat.} & \\ 
           \hline
-          \textit{20} & 0 & 1 & 10 & \textbf{11}\\
-          \textit{40} & 0 & 1 & 10 & \textbf{11}\\
-          \textit{100} & 1 & 2 & 8 & \textbf{11}\\
+          \hline
+          \textbf{20} & 0 & 1 & 10 & \textbf{11}\\
+          \textbf{40} & 0 & 1 & 10 & \textbf{11}\\
+          \textbf{100} & 1 & 2 & 8 & \textbf{11}\\
           \hline
         \end{tabular}
       }
@@ -193,15 +202,16 @@ We then use computational analyses to have a deeper understanding of the underly
   \subsection{Maintaining heterogeneity in a population seeded with specialists}
     \begin{table}[ht]
       \center{
-        \begin{tabular}{lrcccc}
+        \begin{tabular}{|l|r|c|c|c|c|}
           \hline
           \textbf{Pop.} & \textbf{Followers} & \textbf{\# L/F} & \textbf{\# Turning} & \textbf{\# NC} & \textbf{Total}\\ 
           \textbf{size} & \textbf{added} & \textbf{Strat.} & \textbf{Strat.} & \textbf{Strat.} & \\ 
           \hline
-          \textit{40} & \textit{1} & 7 & 0 & 4 & \textbf{11}\\
-          \textit{40} & \textit{20} & 8 & 0 & 3 & \textbf{11}\\
-          \textit{100} & \textit{1} & 10 & 0 & 1 & \textbf{11}\\
-          \textit{100} & \textit{50} & 10 & 0 & 1 & \textbf{11}\\
+          \hline
+          \textbf{40} & \textit{1} & 7 & 0 & 4 & \textbf{11}\\
+          \textbf{40} & \textit{20} & 8 & 0 & 3 & \textbf{11}\\
+          \textbf{100} & \textit{1} & 10 & 0 & 1 & \textbf{11}\\
+          \textbf{100} & \textit{50} & 10 & 0 & 1 & \textbf{11}\\
           \hline
         \end{tabular}
       }
@@ -217,13 +227,14 @@ We then use computational analyses to have a deeper understanding of the underly
 
   \begin{table}[h]
     \center{
-      \begin{tabular}{cccc}
+      \begin{tabular}{|c|c|c|c|}
         \hline
-        \textbf{Phenotype} & \textit{Leader} & \textit{Follower} & \textit{Turner} \\
+        \textbf{Phenotype} & \textbf{Leader} & \textbf{Follower} & \textbf{Turner} \\
         \hline
-        \textit{Leader} & 1265 & 5000 & 3480 \\
-        \textit{Follower} & 5000 & 100 & 2750 \\
-        \textit{Turner} & 3480 & 2750 & 2755 \\
+        \hline
+        \textbf{Leader} & 1265 & 5000 & 3480 \\
+        \textbf{Follower} & 5000 & 100 & 2750 \\
+        \textbf{Turner} & 3480 & 2750 & 2755 \\
         \hline
       \end{tabular}
     }
@@ -249,23 +260,18 @@ We then use computational analyses to have a deeper understanding of the underly
     F_{i} = F_{i}*\frac{W_{i}}{\sum_{j=1}^{M} W_{j}}
   \]
 
-  We show in Figure~\ref{fig:expectations} a vector field of this gradient. We can see that there actually exists an equilibrium between the three phenotypes (marked by the a dot at the crossing between the the dotted lines). This implies that even though the \emph{turner} strategy is not the more efficient one, it is still expected that this phenotype can invade and coexist with the two other phenotypes.
+  We show in Figure~\ref{fig:ternary}(A) a vector field of this gradient. We can see that there actually exists an equilibrium between the three phenotypes (marked by the a dot at the crossing between the the dotted lines). This implies that even though the \emph{turner} strategy is not the more efficient one, it is still expected that this phenotype can invade and coexist with the two other phenotypes.
 
   We can hypothesize that we could not observe this equilibrium in our robotic simulations because of the stochastic effects arising from selection in a finite population. In order to study this hypothesis we ran additional computational simulations based on the same payoff matrix. The initial population is entirely composed of \emph{leaders} and the selection method is an elitist (\(\frac{N}{2}\)+\(\frac{N}{2}\)) evolution strategy where \(N\) is the population size. Every $10$ generations, each offspring has a probability of \(1*10^{-2}\) to mutate into any of the two other phenotypes.
 
-  \begin{figure*}[ht]
+  \begin{figure}[ht]
     \centerfloat
-      \begin{subfigure}[]
-        {\label{fig:expectations} \includegraphics[scale=0.26]{fig/ArticleRob2/ExpectationsVectorsNormalized.png}}
-      \end{subfigure}
-      \begin{subfigure}[]
-        {\label{fig:expectationsScatter} \includegraphics[scale=0.26]{fig/ArticleRob2/ExpectationsScatter.png}}
-      \end{subfigure}
-      \caption{\textbf{Vector field of the gradient of phenotypes' proportions and proportions of phenotypes at last generation of evolution.} {\em (a)}~Vector field of the gradient of phenotypes' proportions in an infinite population. The strength of variation is indicated by the color of the arrow. {\em (b)}~Repartition of phenotypes at the last generation of evolution for all three population sizes. Evolution lasted $1500$ generations and results were replicated across $11$ independent simulations. The initial population was entirely composed of \emph{leaders}.}
-      \label{fig:ternary}
-  \end{figure*}
+      \includegraphics[scale=0.90]{fig/ArticleRob2/figExpectations.png}
+    \caption{\textbf{Vector field of the gradient of phenotypes' proportions and proportions of phenotypes at last generation of evolution.} {\em (A)}~Vector field of the gradient of phenotypes' proportions in an infinite population. The strength of variation is indicated by the color of the arrow. {\em (B)}~Repartition of phenotypes at the last generation of evolution for all three population sizes. Evolution lasted $1500$ generations and results were replicated across $11$ independent simulations. The initial population was entirely composed of \emph{leaders}.}
+    \label{fig:ternary}
+  \end{figure}
 
-  Figure~\ref{fig:expectationsScatter} shows the final repartition of phenotypes after $1500$ generations of evolution for \(N=20\), \(N=100\) and \(N=1000\) in $11$ independent replicates. We can see that when increasing population size we also increase the probability that an equilibrium where the three phenotypes exist is reached. We actually observe that the repartition of phenotypes at last generation of evolution gets closer to the predicted equilibrium as population size increases. This implies that when population size increases, the probability to lose particular phenotypes decreases. In other words, the effect that the stochasticity of fitness evaluation has on the sampling of the genotypes for the next generation is mitigated: population size is essential to the maintenance of specialists.
+  Figure~\ref{fig:ternary}(B) shows the final repartition of phenotypes after $1500$ generations of evolution for \(N=20\), \(N=100\) and \(N=1000\) in $11$ independent replicates. We can see that when increasing population size we also increase the probability that an equilibrium where the three phenotypes exist is reached. We actually observe that the repartition of phenotypes at last generation of evolution gets closer to the predicted equilibrium as population size increases. This implies that when population size increases, the probability to lose particular phenotypes decreases. In other words, the effect that the stochasticity of fitness evaluation has on the sampling of the genotypes for the next generation is mitigated: population size is essential to the maintenance of specialists.
 
 
 \section{Key Properties for Evolving Heterogeneous Behaviours}

@@ -89,15 +89,21 @@ To that end we use incremental evolution. The individuals are first pre-evolved 
 
   \begin{table}[h]
     \center{
-      \begin{tabular}{lrc}
+      \begin{tabular}{|l|r|c|}
         \hline
-        \multicolumn{2}{l}{\textbf{Target}} & \textbf{Reward} \\
+        \multicolumn{2}{|l|}{\textbf{Target}} & \textbf{Reward} \\
         \hline
-        Green & & \\
+        \hline
+        \textbf{Green} & & \\
+        \hline
         & \textit{alone} & 50 \\
+        \hline
         & \textit{coop} & 50 \\
-        Purple & & \\
+        \hline
+        \textbf{Purple} & & \\
+        \hline
         & \textit{alone} & 0 \\
+        \hline
         & \textit{coop} & 250 \\
         \hline
       \end{tabular}
@@ -111,13 +117,16 @@ To that end we use incremental evolution. The individuals are first pre-evolved 
 
     \begin{table}[h]
       \center{
-        \begin{tabular}{lccc}
+        \begin{tabular}{|l|c|c|c|}
           \hline
           \textbf{Setting} & \textbf{\# Coop.} & \textbf{\# Solitary} & \textbf{Total}\\ 
           \hline
-          \textit{Control} & 10 & 50 & \textbf{60}\\
-          \textit{Clonal} & 28 & 32 & \textbf{60}\\
-          \textit{Coevolution} & 14 & 46 & \textbf{60}\\
+          \hline
+          \textbf{Control} & 10 & 50 & \textbf{60}\\
+          \hline
+          \textbf{Clonal} & 28 & 32 & \textbf{60}\\
+          \hline
+          \textbf{Coevolution} & 14 & 46 & \textbf{60}\\
           \hline
         \end{tabular}
       }
@@ -141,22 +150,16 @@ To that end we use incremental evolution. The individuals are first pre-evolved 
 
     These differences in efficiency can be explained by looking at the nature of the cooperative behaviors evolved, which reveals two types of behaviors: \emph{turning} and \emph{leader/follower}.
 
-    Individuals adopting the turning strategy turn around one another so that they always see the other individual as well as stay close to it (Figure~\ref{fig:behaviorHuntingTurning}). This allows the two individuals to approach simultaneously a same target and therefore forage it in a cooperative fashion. In this strategy, both individuals have a similar behavior and no role division is necessary for their successful cooperation.
+    Individuals adopting the turning strategy turn around one another so that they always see the other individual as well as stay close to it (Figure~\ref{fig:behaviorTracesHunting}(A)). This allows the two individuals to approach simultaneously a same target and therefore forage it in a cooperative fashion. In this strategy, both individuals have a similar behavior and no role division is necessary for their successful cooperation.
 
-    In comparison, individuals which evolve a leader/follower strategy adopt a differentiation between two roles: \emph{leader} and \emph{follower} (Figure~\ref{fig:behaviorHuntingLeadership}). The individual we call leader always goes first on a target whereas the follower always arrives second on the same target. We observe that the follower's behavior consists in staying close to the leader and always keeping it in front of itself. In comparison the leader shows a lesser interest in the presence of its follower and rarely checks on its position.
-
+    In comparison, individuals which evolve a leader/follower strategy adopt a differentiation between two roles: \emph{leader} and \emph{follower} (Figure~\ref{fig:behaviorTracesHunting}(B)). The individual we call leader always goes first on a target whereas the follower always arrives second on the same target. We observe that the follower's behavior consists in staying close to the leader and always keeping it in front of itself. In comparison the leader shows a lesser interest in the presence of its follower and rarely checks on its position.
 
     \begin{figure}[h]
-      \centering
-        \begin{subfigure}[]
-          {\label{fig:behaviorHuntingTurning} \includegraphics[scale=0.25]{fig/ArticleRob1/behaviorHuntingTurning.png}}
-        \end{subfigure}~
-        \begin{subfigure}[]
-          {\label{fig:behaviorHuntingLeadership} \includegraphics[scale=0.25]{fig/ArticleRob1/behaviorHuntingLeadership.png}}
-        \end{subfigure}
-        \caption{\textbf{Snapshots of the simulation after an entire trial in the foraging task.}
-        The path of each robotic agent from their initial positions (black dots) is represented in red and blue. The green and purple discs represent the 18 targets in the environment. When a target is foraged by the two agents, a red cross (resp. blue) is drawn on the target if the red agent (resp. blue) arrived on it first. Each snapshot corresponds to a trial where agents adopted a different behavior: {\em (a)}~turning or {\em (b)}~leader/follower.}
-        \label{fig:behaviorTracesHunting}
+      \centerfloat
+        \includegraphics[scale=0.8]{fig/ArticleRob1/figBehaviours.png}
+      \caption{\textbf{Snapshots of the simulation after an entire trial in the foraging task.}
+      The path of each robotic agent from their initial positions (black dots) is represented in red and blue. The green and purple discs represent the 18 targets in the environment. When a target is foraged by the two agents, a red cross (resp. blue) is drawn on the target if the red agent (resp. blue) arrived on it first. Each snapshot corresponds to a trial where agents adopted a different behavior: {\em (A)}~turning or {\em (B)}~leader/follower.}
+      \label{fig:behaviorTracesHunting}
     \end{figure}
 
 
@@ -168,14 +171,17 @@ To that end we use incremental evolution. The individuals are first pre-evolved 
 
     \begin{table}[h]
       \center{
-        \begin{tabular}{lccc}
+        \begin{tabular}{|l|c|c|c|}
           \hline
           \textbf{Setting} & \textbf{\# Leader/Follower} & \textbf{\# Turning} & \textbf{Total}\\ 
            & \textbf{Strategy} & \textbf{Strategy} & \\ 
           \hline
-          \textit{Control} & 0 & 10 & \textbf{10}\\
-          \textit{Clonal} & 0 & 28 & \textbf{28}\\
-          \textit{Coevolution} & 14 & 0 & \textbf{14}\\
+          \hline
+          \textbf{Control} & 0 & 10 & \textbf{10}\\
+          \hline
+          \textbf{Clonal} & 0 & 28 & \textbf{28}\\
+          \hline
+          \textbf{Coevolution} & 14 & 0 & \textbf{14}\\
           \hline
         \end{tabular}
       }
@@ -222,14 +228,17 @@ To that end we use incremental evolution. The individuals are first pre-evolved 
 
     \begin{table}[h]
       \center{
-        \begin{tabular}{lcccc}
+        \begin{tabular}{|l|c|c|c|c|}
           \hline
           \textbf{Setting} & \textbf{\# Lead.} & \textbf{\# Turn.} & \textbf{\# Other} & \textbf{Total}\\ 
            % & \textbf{Strategy} & \textbf{Strategy} & \textbf{Strategy} & \\ 
           \hline
-          \textit{Control} & 19 & 37 & 4 & \textbf{60}\\
-          \textit{Clonal} & 23 & 31 & 6 & \textbf{60}\\
-          \textit{Coevolution} & 59 & 1 & 0 & \textbf{60}\\
+          \hline
+          \textbf{Control} & 19 & 37 & 4 & \textbf{60}\\
+          \hline
+          \textbf{Clonal} & 23 & 31 & 6 & \textbf{60}\\
+          \hline
+          \textbf{Coevolution} & 59 & 1 & 0 & \textbf{60}\\
           \hline
         \end{tabular}
       }
@@ -239,19 +248,11 @@ To that end we use incremental evolution. The individuals are first pre-evolved 
     \end{table}
 
     \begin{figure}[h]
-      \centering
-        \begin{subfigure}[]
-          {\label{fig:leadershipControl} \includegraphics[scale=0.25]{fig/ArticleRob1/proportionLeadershipControl.pdf}}
-        \end{subfigure}
-        \begin{subfigure}[]
-          {\label{fig:leadershipClonal} \includegraphics[scale=0.25]{fig/ArticleRob1/proportionLeadershipClonal.pdf}}
-        \end{subfigure}
-        \begin{subfigure}[]
-          {\label{fig:leadershipCoevo} \includegraphics[scale=0.25]{fig/ArticleRob1/proportionLeadershipCoevo.pdf}}
-        \end{subfigure}
-        \caption{\textbf{Proportion of leadership.}
-        Boxplots of the proportion of leadership over time for the best individuals in each runs where the proportion at the last evaluation was greater than 0.75 in the {\em (a)}~control, {\em (b)}~clonal or {\em (c)}~coevolution setup. This value represents the proportion of waypoints crossed by both individuals for which the leader arrived first.}
-        \label{fig:WaypointsLeadership}
+      \centerfloat
+        \includegraphics[scale=0.8]{fig/ArticleRob1/figLeadership.png}
+      \caption{\textbf{Proportion of leadership.}
+      Boxplots of the proportion of leadership over time for the best individuals in each runs where the proportion at the last evaluation was greater than 0.75 in the {\em (A)}~control, {\em (B)}~clonal or {\em (C)}~coevolution setup. This value represents the proportion of waypoints crossed by both individuals for which the leader arrived first.}
+      \label{fig:WaypointsLeadership}
     \end{figure}
 
     In the coevolution setup, nearly all runs (59/60) evolved a leader/follower strategy. Interestingly, although fitness scores in the clonal and control setups are significantly different, this behavior evolved in roughly one third of the runs for both setups. To explain the difference in fitness scores, we must take into account the quality of the leader/follower strategy in each setup. We measure the proportion of leadership in each interaction, which is computed as the proportion of waypoints crossed by both individuals for which the leader arrived first. Figure~\ref{fig:WaypointsLeadership} displays the boxplots of the proportion of leadership for the best individuals in each setup and only for the simulations where a successful leader/follower strategy evolved (a minimal threshold of 0.75 is chosen to consider only the best performing runs). We show that the proportion of leadership is greater in the clonal and coevolution setups than in the control one (Mann-Whitney, {\em p}-value $< 0.005$). These differences means that the individuals are more efficient in their leader/follower strategy in the clonal and coevolution settings than in the control one. This explains the differences in fitness scores observed in Figure~\ref{fig:WaypointsFitness}.
@@ -265,15 +266,18 @@ To that end we use incremental evolution. The individuals are first pre-evolved 
 
     \begin{table}[h]
       \center{
-        \begin{tabular}{lcccc}
+        \begin{tabular}{|l|c|c|c|c|}
           \hline
-          \multirow{2}{*}{\textbf{Setting}} & \multicolumn{2}{c}{\textbf{\# Coop.}} & \multirow{2}{*}{\textbf{\# Solitary}} & \multirow{2}{*}{\textbf{Total}}\\ 
+          \multirow{2}{*}{\textbf{Setting}} & \multicolumn{2}{c|}{\textbf{\# Coop.}} & \multirow{2}{*}{\textbf{\# Solitary}} & \multirow{2}{*}{\textbf{Total}}\\ 
           \cline{2-3}
            & \textbf{\# Lead.} & \textbf{\# Turn.} & & \\ 
           \hline
-          \textit{Control} & 0 & 20 & 40 & \textbf{60}\\
-          \textit{Clonal} & 0 & 24 & 36 & \textbf{60}\\
-          \textit{Coevolution} & 28 & 0 & 32 & \textbf{60}\\
+          \hline
+          \textbf{Control} & 0 & 20 & 40 & \textbf{60}\\
+          \hline
+          \textbf{Clonal} & 0 & 24 & 36 & \textbf{60}\\
+          \hline
+          \textbf{Coevolution} & 28 & 0 & 32 & \textbf{60}\\
           \hline
         \end{tabular}
       }
