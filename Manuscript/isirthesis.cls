@@ -56,7 +56,7 @@
 \def\@thefor{in partial fulfillment of\\the requirements for the degree of}
 \def\@thedoctor{Doctor in}
 \def\@thekeywords{Keywords}
-\def\@theinfos{Informations}
+\def\@theinfos{Address}
 \def\@theglossary{Glossary}
 \def\@theindex{Index}
 \def\@thejury{Committee}

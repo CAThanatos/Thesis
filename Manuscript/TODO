@@ -161,10 +161,6 @@ ACKNOWLEDGMENTS: Mettre une citation à la con, genre:
 										 
 
 
-
-REFERENCES: Ferrant et al. ?										 
-
-
 ----------------------------------------------------------------------------------------------------
 
 GAFFE AU MITRI2012 QUI EST EN FAIT MITRI2013
@@ -176,8 +172,7 @@ Vérifier les paramètres dans ArticleBio1 (61 inputs ?)
 -> Que faire quand je dis qu'il y a des vidéos en supp mat ?
 
 -> Va falloir bien dire à un moment que c'est une thèse sur article. Où ? Intro générale ?
-
--> PUBLICATIONS
+		-> C'est dit dans la partie organisation maintenant je crois
 
 -> Penser à caser Aevol
 
@@ -193,10 +188,9 @@ Vérifier les paramètres dans ArticleBio1 (61 inputs ?)
 
 
 AVANT DE SOUMETTRE:
-	- Abstract
-	- Keywords
-	- Truc où on explique les termes
+	- Page de garde -> Sous-titre fr ?, hyène en cover image ? (<3)
+	- Glossaire -> Voir avec Erwan
 	- (Acknowledgments)
 	- Format des tables consistent
-	- Publications
 	- Résumé en français ?
+	- Vérifier la tronche des graphs quand même (surtout dans Article Bio 1)

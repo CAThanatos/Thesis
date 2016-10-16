@@ -1,0 +1,47 @@
+Mechanistic Constraints in the Evolution of Coordination.
+• Présentation invitée
+• Lieu : Université de Lausanne, Ecologie et Evolution, Lausanne, Suisse / Date : Septembre 2016
+• Evolving Specialisation in a Population of Heterogeneous Robots : the Challenge of Boottstrapping and
+Maintaining Genotypic Polymorphism.
+• Conférence (ALIFE XV)
+• Lieu : Cancun, Mexique / Date : Juillet 2016
+• Mechanistic Constraints in the Evolution of Coordination.
+• Workshop
+• Lieu : Journée Evolution artificielle Thématique (JET), Paris, France / Date : Juin 2016
+• Mechanistic Constraints in the Evolution of Coordination.
+• Présentation invitée
+• Lieu : Institut des Sciences de l'Evolution de Montpellier, équipe Biologie Evolutive Humaine,
+Montpellier, France / Date : May 2015
+• Evolution of Cooperation in Evolutionary Robotics: the Tradeoff between Evolvability and Efficiency.
+• Conférence (ECAL 13)
+• Lieu : York, Royaume Uni / Date : Juillet 2015
+• Mechanistic Constraints in the Evolution of the Stag Hunt
+• Présentation invitée
+• Lieu : Institut Jean-Nicod, équipe Évolution et Cognition Sociale, Paris, France / Date : May 2015
+
+@unpublished{BernardALife,
+title= {Evolving Specialisation in a Population of Heterogeneous Robots: the Challenge of Bootstrapping and Maintaining Genotypic Polymorphism},
+author = {Bernard, Arthur},
+year = {2016},
+note= {The 15th International Conference on the Synthesis and Simulation of Living Systems (ALIFE XV)},
+address = {Cancun, Mexico},
+keywords = {own, talk, unbib}
+}
+
+@unpublished{BernardECAL,
+title= {Evolution of Cooperation in Evolutionary Robotics: the Tradeoff between Evolvability and Efficiency},
+author = {Bernard, Arthur},
+year = {2015},
+note= {The 13th European Conference on Artificial Life (ECAL 2015)},
+address = {York, United Kingdom},
+keywords = {own, talk, unbib}
+}
+
+@unpublished{BernardJET,
+title= {Mechanistic Constraints in the Evolution of Coordination},
+author = {Bernard, Arthur},
+year = {2016},
+note= {Journ'ee Evolution Artificielle Th'ematique (JET)},
+address = {Paris, France},
+keywords = {own, talk, unbib}
+}
