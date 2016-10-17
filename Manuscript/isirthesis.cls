@@ -520,6 +520,8 @@
 %% Bibliography
 \RequirePackage[url=false,
 		doi=false,
+    isbn=false,
+    eprint=false,
 		uniquename=false,
 		uniquelist=false,
 		style=authoryear-comp,
